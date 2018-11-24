@@ -10,7 +10,7 @@ import UIKit
 
 class SegmentView: UIView {
 
-      
+      fileprivate let kUMMaxVisibleCount = 3
       //标题数组
       var titles: [String]?
     
@@ -36,6 +36,19 @@ class SegmentView: UIView {
       
       //当前被选中的下标，设置默认选中下标为0
       var selectedIndex: Int = 0
+      
+      override init(frame: CGRect) {
+            super.init(frame: frame)
+            
+      }
+      required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+            
+      }
+      
+      fileprivate func setUI() {
+            
+      }
       
       fileprivate  lazy var collectionView: UICollectionView = {
             let layout = UICollectionViewFlowLayout()
@@ -65,7 +78,7 @@ class SegmentViewFlowLayout: UICollectionViewFlowLayout {
       }
 }
 
-extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return self.titles?.count ?? 0
       }
@@ -79,6 +92,19 @@ extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource {
             }
             return cell!
       }
+      
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let viewSize = self.bounds.size
+            return CGSize(width: viewSize.width / CGFloat(kUMMaxVisibleCount), height: viewSize.height)
+      }
+      
+      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            collectionView.deselectItem(at: indexPath, animated: true)
+            self.selectedIndex = indexPath.row
+            collectionView.reloadData()
+            
+      }
+      
       
       
 }

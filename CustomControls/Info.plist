@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App需要您的同意, 才能访问相册,以便您选择图片等</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App需要您的同意, 才能保存图片到您的相册</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>App需要您的同意,  才能访问麦克风,以便于为您提供录音等服务</string>
+	<key>NSLocationUsageDescription</key>
+	<string>App需要您的同意,  才能访问位置,以便正常使用地图功能</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App需要您的同意,  才能始终访问位置,以便正常使用地图功能</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>App需要您的同意,  才能使用定位功能,将你的位置显示在地图,以便正常使用地图功能</string>
+	<key>NSContactsUsageDescription</key>
+	<string>App需要您的同意,  才能访问你的通讯录,以便于为您提供添加好友服务</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App需要您的同意,  才能访问相机,以便于为您提供扫码,拍照等服务</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>App需要您的同意,  才能访问日历,以便于为您提供日历查阅等服务</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>

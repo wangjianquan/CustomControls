@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tiger" translatesAutoresizingMaskIntoConstraints="NO" id="8Bq-BT-czj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In me the tiger sniffs the rose." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8h-R9-ybW">
+                                <rect key="frame" x="73.5" y="631" width="228" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wvo-vw-wSa" firstAttribute="bottom" secondItem="J8h-R9-ybW" secondAttribute="bottom" constant="15" id="3jg-Qo-PQv"/>
+                            <constraint firstAttribute="trailing" secondItem="8Bq-BT-czj" secondAttribute="trailing" id="7JN-sg-hfg"/>
+                            <constraint firstItem="8Bq-BT-czj" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="KAB-cW-tgp"/>
+                            <constraint firstAttribute="bottom" secondItem="8Bq-BT-czj" secondAttribute="bottom" id="LZm-Cd-k5m"/>
+                            <constraint firstItem="J8h-R9-ybW" firstAttribute="centerX" secondItem="Wvo-vw-wSa" secondAttribute="centerX" id="atY-dX-xCO"/>
+                            <constraint firstItem="8Bq-BT-czj" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hZp-RN-1G0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wvo-vw-wSa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tiger" width="212" height="301"/>
+    </resources>
+</document>

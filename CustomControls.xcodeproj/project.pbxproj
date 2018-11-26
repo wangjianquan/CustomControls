@@ -17,11 +17,13 @@
 		1C07B22A21A791D200D86591 /* DragViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C07B22521A791D200D86591 /* DragViewController.swift */; };
 		1C07B22C21A791F800D86591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C07B22B21A791F800D86591 /* AppDelegate.swift */; };
 		1C07B22E21A7925900D86591 /* UMTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C07B22D21A7925900D86591 /* UMTool.swift */; };
+		1C0E7A6921ABC67300E0C22B /* SegmentCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0E7A6821ABC67300E0C22B /* SegmentCollectionCell.swift */; };
+		1C0E7A6B21ABDDAB00E0C22B /* ContentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0E7A6A21ABDDAB00E0C22B /* ContentScrollView.swift */; };
+		1C0E7A6D21ABECFC00E0C22B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */; };
 		1C98679921A7CA55009AE3F1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98679821A7CA55009AE3F1 /* libz.tbd */; };
 		1C98679B21A7CA78009AE3F1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98679A21A7CA78009AE3F1 /* libc++.tbd */; };
 		1CC3AE6321A938660004F0C8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3AE6221A938660004F0C8 /* UIColor+Extension.swift */; };
 		1CC3AE8521A948940004F0C8 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3AE8421A948940004F0C8 /* SegmentView.swift */; };
-		1CC3AE8721A94F8B0004F0C8 /* SegmentCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3AE8621A94F8B0004F0C8 /* SegmentCollectionCell.swift */; };
 		7C11DBC3216C5AB20055E5A4 /* FirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C11DBBF216C5AB20055E5A4 /* FirstVC.xib */; };
 		7C11DBC4216C5AB20055E5A4 /* SecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C11DBC0216C5AB20055E5A4 /* SecondVC.xib */; };
 		7C11DBC5216C5AB20055E5A4 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11DBC1216C5AB20055E5A4 /* FirstVC.swift */; };
@@ -55,11 +57,13 @@
 		1C07B22521A791D200D86591 /* DragViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragViewController.swift; sourceTree = "<group>"; };
 		1C07B22B21A791F800D86591 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C07B22D21A7925900D86591 /* UMTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMTool.swift; sourceTree = "<group>"; };
+		1C0E7A6821ABC67300E0C22B /* SegmentCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentCollectionCell.swift; sourceTree = "<group>"; };
+		1C0E7A6A21ABDDAB00E0C22B /* ContentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentScrollView.swift; sourceTree = "<group>"; };
+		1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		1C98679821A7CA55009AE3F1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1C98679A21A7CA78009AE3F1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1CC3AE6221A938660004F0C8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1CC3AE8421A948940004F0C8 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
-		1CC3AE8621A94F8B0004F0C8 /* SegmentCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentCollectionCell.swift; sourceTree = "<group>"; };
 		1E940777E0D60E37914945D9 /* Pods_CustomControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11DBBF216C5AB20055E5A4 /* FirstVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstVC.xib; sourceTree = "<group>"; };
 		7C11DBC0216C5AB20055E5A4 /* SecondVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondVC.xib; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			children = (
 				1C07B22221A791D200D86591 /* ViewController.swift */,
 				1C07B22121A791D200D86591 /* AuthorizeSettingVC.swift */,
+				1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */,
 				1C07B22321A791D200D86591 /* AuthorizeSettingVC.xib */,
 				1C07B22421A791D200D86591 /* SlidersViewController.swift */,
 				1C07B22521A791D200D86591 /* DragViewController.swift */,
@@ -154,7 +159,8 @@
 			children = (
 				7C522F412154E1FA009A8261 /* SelectedView.swift */,
 				1CC3AE8421A948940004F0C8 /* SegmentView.swift */,
-				1CC3AE8621A94F8B0004F0C8 /* SegmentCollectionCell.swift */,
+				1C0E7A6821ABC67300E0C22B /* SegmentCollectionCell.swift */,
+				1C0E7A6A21ABDDAB00E0C22B /* ContentScrollView.swift */,
 			);
 			path = SegmentView;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0E7A6B21ABDDAB00E0C22B /* ContentScrollView.swift in Sources */,
 				7C522F4B2154E1FB009A8261 /* SelectedView.swift in Sources */,
 				7C522F532154E232009A8261 /* UIPlaceHoderTextView.swift in Sources */,
 				7CBD22FD21609E5100599509 /* FloatTitleTextField.swift in Sources */,
@@ -408,8 +415,9 @@
 				7C11DBC5216C5AB20055E5A4 /* FirstVC.swift in Sources */,
 				1C07B22C21A791F800D86591 /* AppDelegate.swift in Sources */,
 				1C07B22A21A791D200D86591 /* DragViewController.swift in Sources */,
-				1CC3AE8721A94F8B0004F0C8 /* SegmentCollectionCell.swift in Sources */,
+				1C0E7A6921ABC67300E0C22B /* SegmentCollectionCell.swift in Sources */,
 				1C07B21B21A791B600D86591 /* AuthorizeTool.swift in Sources */,
+				1C0E7A6D21ABECFC00E0C22B /* ContentViewController.swift in Sources */,
 				7CD79EA51F135A280046D461 /* CustomSlider.swift in Sources */,
 				7C11DBC6216C5AB20055E5A4 /* SecondVC.swift in Sources */,
 				1C07B22921A791D200D86591 /* SlidersViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    
+    @IBInspectable
     var width : CGFloat{
         get{ return self.frame.width }
         set{
@@ -19,7 +19,7 @@ extension UIView {
             self.frame = frame
         }
     }
-    
+    @IBInspectable
     var height : CGFloat{
         get{ return self.frame.height }
         set{
@@ -28,7 +28,7 @@ extension UIView {
             self.frame = frame
         }
     }
-    
+    @IBInspectable
     var x : CGFloat{
         get{ return self.frame.origin.x }
         set{
@@ -37,7 +37,7 @@ extension UIView {
             self.frame = frame
         }
     }
-    
+    @IBInspectable
     var y : CGFloat{
         get{ return self.frame.origin.y }
         set{
@@ -46,7 +46,7 @@ extension UIView {
             self.frame = frame
         }
     }
-    
+    @IBInspectable
     var size : CGSize {
         
         get { return self.frame.size }
@@ -56,7 +56,7 @@ extension UIView {
             self.frame = frame
         }
     }
-    
+    @IBInspectable
     var centerX : CGFloat{
         get { return self.center.x }
         set{
@@ -65,7 +65,7 @@ extension UIView {
             self.center = center
         }
     }
-    
+    @IBInspectable
     var centerY : CGFloat{
         get { return self.center.x }
         set{

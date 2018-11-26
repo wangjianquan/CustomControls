@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
     @IBOutlet weak var search: SearchView!
     @IBOutlet weak var progressView: ProgressView!
@@ -73,6 +73,9 @@ class ViewController: UIViewController {
     
     var bookdata =  Data()
     var infodata =  Data()
+     
+      
+      
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
@@ -80,10 +83,10 @@ class ViewController: UIViewController {
         view.addSubview(selectView)
         view.addSubview(titleBtn)
         view.addSubview(edage)
-        
-        
+      
     }
     
+      
 //    let authorizeTool = AuthorizeTool.sharedInstance
     
     override func viewWillAppear(_ animated: Bool) {
@@ -136,8 +139,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+      
+      @IBAction func segmentPush(_ sender: Any) {
+            self.navigationController?.pushViewController(ContentViewController(), animated: true)
 
-
+      }
 }
 
 

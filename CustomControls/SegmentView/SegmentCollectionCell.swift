@@ -28,14 +28,22 @@ class SegmentCollectionCell: UICollectionViewCell {
       }
       
  
-     fileprivate let textColor: UIColor = UIColor(hex: 0x2196F3)
-           
+    
+      /**
+       * bottomLineColor
+       */
+      var bottomLineColor: UIColor!
       
       /**
-       *  选中后下划线高度
+       *  下划线高度
        */
-      var bottomLineWidth : CGFloat!
- 
+      var bottomLineHeight : CGFloat!
+      
+      /**
+       *  下划线起点
+       */
+      var bottomLineX: CGFloat!
+    
       override init(frame: CGRect) {
             super.init(frame: frame)
             self.setUI()
@@ -47,10 +55,8 @@ class SegmentCollectionCell: UICollectionViewCell {
       }
       
       fileprivate func setUI() {
-            
             self.backgroundColor = UIColor.clear
             self.titleLabel.frame =  CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-            self.bottomLineWidth = 3.0
             self.addSubview(self.titleLabel)
       }
       
@@ -58,11 +64,13 @@ class SegmentCollectionCell: UICollectionViewCell {
       override func draw(_ rect: CGRect) {
             if isSeleted == true {
                   let linePath = UIBezierPath()
-                  let y: CGFloat = rect.height - bottomLineWidth
-                  linePath.move(to: CGPoint(x: titleLabel.frame.minX + 4, y: y))
-                  linePath.addLine(to: CGPoint(x: titleLabel.frame.maxX - 4, y: y))
-                  linePath.lineWidth = bottomLineWidth
-                  textColor.setStroke()
+                  let y: CGFloat = rect.height - self.bottomLineHeight
+                  //起点
+                  linePath.move(to: CGPoint(x: titleLabel.frame.minX + self.bottomLineX , y: y))
+                  //终点
+                  linePath.addLine(to: CGPoint(x: titleLabel.frame.maxX - self.bottomLineX, y: y))
+                  linePath.lineWidth = self.bottomLineHeight
+                  bottomLineColor.setStroke()
                   linePath.stroke()
             }
       }

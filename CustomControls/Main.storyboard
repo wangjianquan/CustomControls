@@ -108,6 +108,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="M5h-P2-Wjr">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="iYT-3H-4pZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TQF-8s-oov">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="segment"/>
+                                <connections>
+                                    <action selector="segmentPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V2Y-bD-GQp"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="NeY-Sd-L8k">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MZF-Y0-HEy">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>

@@ -19,13 +19,9 @@ enum CheckType {
     case audio
 }
 
-
-
 class AuthorizeTool: NSObject {
-    
     static let sharedInstance = AuthorizeTool()
     private override init() {}
-    
     func contactAuthorizationStatus() -> CNAuthorizationStatus {
         var authStatus = CNAuthorizationStatus.authorized
         let status  = CNContactStore.authorizationStatus(for: .contacts)
@@ -38,12 +34,10 @@ class AuthorizeTool: NSObject {
         }
         return authStatus
     }
-    
     func avcaptureAuthStatus() -> AVAuthorizationStatus  {
         let authostatus = AVCaptureDevice.authorizationStatus(for: .video)
         return authostatus
     }
-    
     func photoAuthStatus() -> Bool {
         let photo = false
         let library:PHAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
@@ -53,9 +47,7 @@ class AuthorizeTool: NSObject {
             return photo == true
         }
     }
-    
-   
-    //MARK: -- 相机权限
+    // MARK: - 相机权限
     func videoAuthorize() -> Bool {
         let status = AVCaptureDevice.authorizationStatus(for: .video)
         switch status {
@@ -74,8 +66,7 @@ class AuthorizeTool: NSObject {
             return false
         }
     }
-    
-    //MARK: -- 麦克风权限
+    // MARK: - 麦克风权限
     func audioAuthorize() -> Bool {
         let status = AVCaptureDevice.authorizationStatus(for: .audio)
         switch status {
@@ -95,7 +86,7 @@ class AuthorizeTool: NSObject {
         }
     }
     
-    //MARK: -- 通讯录权限
+    // MARK: - 通讯录权限
     func contactAuthorize() {
         let status  = CNContactStore.authorizationStatus(for: .contacts)
         switch status {
@@ -119,7 +110,7 @@ class AuthorizeTool: NSObject {
         }
     }
     
-    //MARK: -- 相册权限
+    // MARK: - 相册权限
     func photoAuthorize() {
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {

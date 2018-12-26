@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0760FF21CC81B60004E4EC /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0760FE21CC81B60004E4EC /* AppStoreReviewManager.swift */; };
+		1C07610221CC87180004E4EC /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C07610121CC87180004E4EC /* Intents.framework */; };
 		1C07B21B21A791B600D86591 /* AuthorizeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C07B21A21A791B600D86591 /* AuthorizeTool.swift */; };
 		1C07B21E21A791BD00D86591 /* UIAlertController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C07B21C21A791BD00D86591 /* UIAlertController+TextField.swift */; };
 		1C07B21F21A791BD00D86591 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C07B21D21A791BD00D86591 /* UIView+Extention.swift */; };
@@ -20,10 +22,14 @@
 		1C0E7A6921ABC67300E0C22B /* SegmentCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0E7A6821ABC67300E0C22B /* SegmentCollectionCell.swift */; };
 		1C0E7A6B21ABDDAB00E0C22B /* ContentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0E7A6A21ABDDAB00E0C22B /* ContentScrollView.swift */; };
 		1C0E7A6D21ABECFC00E0C22B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */; };
+		1C20E8DB21ACF05D006D6656 /* WJSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C20E8DA21ACF05D006D6656 /* WJSegmentedControl.swift */; };
+		1C49CBBB21D3694F005017D9 /* UIButton+badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C49CBBA21D3694F005017D9 /* UIButton+badge.swift */; };
 		1C98679921A7CA55009AE3F1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98679821A7CA55009AE3F1 /* libz.tbd */; };
 		1C98679B21A7CA78009AE3F1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98679A21A7CA78009AE3F1 /* libc++.tbd */; };
 		1CC3AE6321A938660004F0C8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3AE6221A938660004F0C8 /* UIColor+Extension.swift */; };
 		1CC3AE8521A948940004F0C8 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3AE8421A948940004F0C8 /* SegmentView.swift */; };
+		1CF2EED921AFC4E200149237 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF2EED821AFC4E200149237 /* ShareViewController.swift */; };
+		1CF2EEDB21AFC53F00149237 /* FromBottomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF2EEDA21AFC53F00149237 /* FromBottomAnimator.swift */; };
 		7C11DBC3216C5AB20055E5A4 /* FirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C11DBBF216C5AB20055E5A4 /* FirstVC.xib */; };
 		7C11DBC4216C5AB20055E5A4 /* SecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C11DBC0216C5AB20055E5A4 /* SecondVC.xib */; };
 		7C11DBC5216C5AB20055E5A4 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11DBC1216C5AB20055E5A4 /* FirstVC.swift */; };
@@ -47,6 +53,9 @@
 /* Begin PBXFileReference section */
 		0C0208252D9E8D510E4267A8 /* Pods-CustomControls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomControls.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomControls/Pods-CustomControls.release.xcconfig"; sourceTree = "<group>"; };
 		1C01F0AE21A67E29001C2ECD /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		1C0760FE21CC81B60004E4EC /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		1C07610021CC86BB0004E4EC /* CustomControls.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomControls.entitlements; sourceTree = "<group>"; };
+		1C07610121CC87180004E4EC /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		1C07B21A21A791B600D86591 /* AuthorizeTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeTool.swift; sourceTree = "<group>"; };
 		1C07B21C21A791BD00D86591 /* UIAlertController+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+TextField.swift"; sourceTree = "<group>"; };
 		1C07B21D21A791BD00D86591 /* UIView+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
@@ -60,10 +69,14 @@
 		1C0E7A6821ABC67300E0C22B /* SegmentCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentCollectionCell.swift; sourceTree = "<group>"; };
 		1C0E7A6A21ABDDAB00E0C22B /* ContentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentScrollView.swift; sourceTree = "<group>"; };
 		1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		1C20E8DA21ACF05D006D6656 /* WJSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WJSegmentedControl.swift; sourceTree = "<group>"; };
+		1C49CBBA21D3694F005017D9 /* UIButton+badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+badge.swift"; sourceTree = "<group>"; };
 		1C98679821A7CA55009AE3F1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1C98679A21A7CA78009AE3F1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1CC3AE6221A938660004F0C8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1CC3AE8421A948940004F0C8 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
+		1CF2EED821AFC4E200149237 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1CF2EEDA21AFC53F00149237 /* FromBottomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromBottomAnimator.swift; sourceTree = "<group>"; };
 		1E940777E0D60E37914945D9 /* Pods_CustomControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11DBBF216C5AB20055E5A4 /* FirstVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstVC.xib; sourceTree = "<group>"; };
 		7C11DBC0216C5AB20055E5A4 /* SecondVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondVC.xib; sourceTree = "<group>"; };
@@ -92,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C07610221CC87180004E4EC /* Intents.framework in Frameworks */,
 				1C98679B21A7CA78009AE3F1 /* libc++.tbd in Frameworks */,
 				1C98679921A7CA55009AE3F1 /* libz.tbd in Frameworks */,
 				8DF6E7BF8B8F5A870A373C91 /* Pods_CustomControls.framework in Frameworks */,
@@ -126,9 +140,12 @@
 			children = (
 				1C07B22221A791D200D86591 /* ViewController.swift */,
 				1C07B22121A791D200D86591 /* AuthorizeSettingVC.swift */,
+				1C0760FE21CC81B60004E4EC /* AppStoreReviewManager.swift */,
 				1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */,
 				1C07B22321A791D200D86591 /* AuthorizeSettingVC.xib */,
 				1C07B22421A791D200D86591 /* SlidersViewController.swift */,
+				1CF2EED821AFC4E200149237 /* ShareViewController.swift */,
+				1CF2EEDA21AFC53F00149237 /* FromBottomAnimator.swift */,
 				1C07B22521A791D200D86591 /* DragViewController.swift */,
 			);
 			path = ViewControllers;
@@ -178,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				7C522F462154E1FB009A8261 /* TitleButton.swift */,
+				1C49CBBA21D3694F005017D9 /* UIButton+badge.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -236,6 +254,7 @@
 		7CD79E8E1F1359DB0046D461 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
+				1C07610021CC86BB0004E4EC /* CustomControls.entitlements */,
 				1C07B22021A791D200D86591 /* ViewControllers */,
 				7C11DBBE216C5A6A0055E5A4 /* Codable */,
 				7CBD22FB21609DD900599509 /* TextField */,
@@ -250,6 +269,7 @@
 				7CD79E961F1359DB0046D461 /* Assets.xcassets */,
 				7CBFFC1821491C8900A03A65 /* Main.storyboard */,
 				7CD79E981F1359DB0046D461 /* LaunchScreen.storyboard */,
+				1C20E8DA21ACF05D006D6656 /* WJSegmentedControl.swift */,
 				7CBD22FE2160CD4D00599509 /* GlobalConst.swift */,
 				1C01F0AE21A67E29001C2ECD /* Bridging-Header.h */,
 				7CD79E9B1F1359DB0046D461 /* Info.plist */,
@@ -268,6 +288,7 @@
 		CBFC851D7F0204EF57EBEB1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C07610121CC87180004E4EC /* Intents.framework */,
 				1C98679A21A7CA78009AE3F1 /* libc++.tbd */,
 				1C98679821A7CA55009AE3F1 /* libz.tbd */,
 				1E940777E0D60E37914945D9 /* Pods_CustomControls.framework */,
@@ -312,6 +333,11 @@
 						DevelopmentTeam = J62FEE96YX;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -410,13 +436,17 @@
 				1C07B21F21A791BD00D86591 /* UIView+Extention.swift in Sources */,
 				7CBD22FF2160CD4E00599509 /* GlobalConst.swift in Sources */,
 				7C522F4D2154E1FB009A8261 /* CircleProgressView.swift in Sources */,
+				1C49CBBB21D3694F005017D9 /* UIButton+badge.swift in Sources */,
 				1CC3AE8521A948940004F0C8 /* SegmentView.swift in Sources */,
+				1C20E8DB21ACF05D006D6656 /* WJSegmentedControl.swift in Sources */,
 				7C522F4C2154E1FB009A8261 /* ProgressView.swift in Sources */,
 				7C11DBC5216C5AB20055E5A4 /* FirstVC.swift in Sources */,
 				1C07B22C21A791F800D86591 /* AppDelegate.swift in Sources */,
+				1CF2EED921AFC4E200149237 /* ShareViewController.swift in Sources */,
 				1C07B22A21A791D200D86591 /* DragViewController.swift in Sources */,
 				1C0E7A6921ABC67300E0C22B /* SegmentCollectionCell.swift in Sources */,
 				1C07B21B21A791B600D86591 /* AuthorizeTool.swift in Sources */,
+				1CF2EEDB21AFC53F00149237 /* FromBottomAnimator.swift in Sources */,
 				1C0E7A6D21ABECFC00E0C22B /* ContentViewController.swift in Sources */,
 				7CD79EA51F135A280046D461 /* CustomSlider.swift in Sources */,
 				7C11DBC6216C5AB20055E5A4 /* SecondVC.swift in Sources */,
@@ -427,6 +457,7 @@
 				1C07B21E21A791BD00D86591 /* UIAlertController+TextField.swift in Sources */,
 				7C522F4F2154E1FB009A8261 /* SearchView.swift in Sources */,
 				7C522F502154E1FB009A8261 /* EdgeLabel.swift in Sources */,
+				1C0760FF21CC81B60004E4EC /* AppStoreReviewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,9 +591,10 @@
 			baseConfigurationReference = F5C418FB5504E47DCA1D7BA5 /* Pods-CustomControls.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CustomControls/CustomControls.entitlements;
 				DEVELOPMENT_TEAM = J62FEE96YX;
 				INFOPLIST_FILE = CustomControls/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjq.CustomControls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -576,9 +608,10 @@
 			baseConfigurationReference = 0C0208252D9E8D510E4267A8 /* Pods-CustomControls.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CustomControls/CustomControls.entitlements;
 				DEVELOPMENT_TEAM = J62FEE96YX;
 				INFOPLIST_FILE = CustomControls/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjq.CustomControls;
 				PRODUCT_NAME = "$(TARGET_NAME)";

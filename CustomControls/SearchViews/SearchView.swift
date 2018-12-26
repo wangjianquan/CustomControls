@@ -13,7 +13,7 @@ class SearchView: UIView {
     
     let space: CGFloat = 5
     
-    //MARK: -- placeHolder
+    // MARK: - placeHolder
     @IBInspectable
     var placeHolder: String? = "请输入搜索关键字"{
         didSet{
@@ -21,7 +21,7 @@ class SearchView: UIView {
         }
     }
     
-    //MARK: -- 背景色
+    // MARK: - 背景色
     @IBInspectable
     var bgViewColor: UIColor? = UIColor.white{
         didSet{
@@ -29,7 +29,7 @@ class SearchView: UIView {
         }
     }
     
-    //MARK: -- 短竖线颜色
+    // MARK: - 短竖线颜色
     @IBInspectable
     var lineColor: UIColor? = UIColor.darkGray{
         didSet{
@@ -37,7 +37,7 @@ class SearchView: UIView {
         }
     }
     
-    //MARK: -- textField背景颜色
+    // MARK: - textField背景颜色
     @IBInspectable
     var fieldBgColor: UIColor? = UIColor.white{
         didSet{

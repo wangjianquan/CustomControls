@@ -47,7 +47,7 @@ class FloatTitleTextField: UITextField {
         }
     }
     
-    //MARK: -- 间距
+    // MARK: - 间距
     @IBInspectable var hintPadding_Y: CGFloat = 0.0
     @IBInspectable var titlePadding_Y: CGFloat = 0.0 {
         didSet{
@@ -57,7 +57,7 @@ class FloatTitleTextField: UITextField {
         }
     }
     
-    //MARK: -- (标题文字 在textfield未编辑情况的颜色)
+    // MARK: - (标题文字 在textfield未编辑情况的颜色)
     @IBInspectable var titleTextColour : UIColor = .gray{
         didSet{
             if !isFirstResponder {
@@ -65,7 +65,7 @@ class FloatTitleTextField: UITextField {
             }
         }
     }
-    //MARK: -- (标题文字 在textfield编辑情况的颜色)
+    // MARK: -  (标题文字 在textfield编辑情况的颜色)
     @IBInspectable var titleActiveTextColour : UIColor! {
         didSet{
             if isFirstResponder{
@@ -98,8 +98,6 @@ class FloatTitleTextField: UITextField {
         }
         self.addSubview(titleLabel)
     }
-    
-    
     fileprivate func setTitlePositionForTextAlignment() {
         let rect = textRect(forBounds: bounds)
         var x = rect.origin.x
@@ -116,7 +114,7 @@ class FloatTitleTextField: UITextField {
         }
         return 0.0
     }
-    //MARK: -- 重写
+    // MARK: - 重写
     override func layoutSubviews() {
         super.layoutSubviews()
         setTitlePositionForTextAlignment()
@@ -126,14 +124,13 @@ class FloatTitleTextField: UITextField {
         }else{
             titleLabel.textColor = titleTextColour
         }
+
         if let text = text, text.isEmpty {
             hideTitle(isResp)
         }else{
             showTitle(isResp)
         }
     }
-    
-    
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         var rect = super.textRect(forBounds: bounds)
         if let text = text, !text.isEmpty {
@@ -163,26 +160,7 @@ class FloatTitleTextField: UITextField {
         }
         return rect.integral
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
-
-
 extension FloatTitleTextField {
     fileprivate func showTitle(_ animated: Bool) {
         let duration = animated ? animationDuration : 0
@@ -193,7 +171,6 @@ extension FloatTitleTextField {
             self.titleLabel.frame = rect
         }, completion: nil)
     }
-    
     fileprivate func hideTitle(_ animated: Bool){
         let duration = animated ? animationDuration : 0
         UIView.animate(withDuration: duration, delay:0, options: [.beginFromCurrentState, .curveEaseInOut], animations:{
@@ -203,5 +180,4 @@ extension FloatTitleTextField {
             self.titleLabel.frame = rect
         }, completion: nil)
     }
-    
 }

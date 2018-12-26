@@ -16,8 +16,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var circlePro: CircleProgressView!
     @IBOutlet weak var placeTextView: UIPlaceHoderTextView!
     
-      var ar = [2,3,4]
-      
+//    var ar = [2,3,4]
+
     lazy var selectView: SelectedView = {
         let seleView = SelectedView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
         seleView.title_SelectColor = .red
@@ -32,8 +32,7 @@ class ViewController: UIViewController{
         }
         return seleView
     }()
-   
-    //MARK: -- 搜索栏
+    // MARK: - 搜索栏
     lazy var naviSearchView: SearchView = {
         let searchView = SearchView()
         searchView.frame = CGRect(x: 0, y: 0, width:230, height: 44)
@@ -42,8 +41,7 @@ class ViewController: UIViewController{
         searchView.placeHolder = "请输入关键字"
         return searchView
     }()
-    
-    //MARK: -- 测试
+    // MARK: - 测试
     lazy var edage: EdgeLabel = {
         let label = EdgeLabel()
         label.center.x = 15
@@ -58,9 +56,7 @@ class ViewController: UIViewController{
         label.setAttribute(text: string, rangeString:"开始: " )
         return label
     }()
-    
-    //MARK: -- 懒加载
-    // 标题按钮
+    // MARK: -  标题按钮
     fileprivate lazy var titleBtn : TitleButton = {
         let titleBtn = TitleButton()
         titleBtn.setTitle("Codable(回显)", for: .normal)
@@ -70,7 +66,6 @@ class ViewController: UIViewController{
         titleBtn.addTarget(self, action: #selector(ViewController.titleBtnClick(_:)), for: .touchUpInside)
         return titleBtn
     }()
-    
     var bookdata =  Data()
     var infodata =  Data()
      
@@ -83,9 +78,16 @@ class ViewController: UIViewController{
         view.addSubview(selectView)
         view.addSubview(titleBtn)
         view.addSubview(edage)
-      
+
+        let badgeBtn = UIButton(frame: CGRect(x: 0, y: 300, width: 88, height: 35))
+        badgeBtn.badgeValue = "12"
+        badgeBtn.badgeBGColor = .red
+        badgeBtn.backgroundColor = UIColor.black
+        view.addSubview(badgeBtn)
+
     }
-    
+
+
       
 //    let authorizeTool = AuthorizeTool.sharedInstance
     
@@ -116,7 +118,7 @@ class ViewController: UIViewController{
         super.viewWillDisappear(animated)
         MobClick.endLogPageView("\(type(of: self))")
     }
-    //MARK: --标题按钮
+    // MARK: - 标题按钮
     @objc fileprivate func titleBtnClick(_ btn: TitleButton) {
         btn.isSelected = !btn.isSelected
         let vc = FirstVC()
@@ -125,12 +127,7 @@ class ViewController: UIViewController{
         MobClick.event("1")
         MobClick.event("2")
 
-        
-       
-        
     }
-    
-    
     @IBAction func valueChange(_ sender: UISlider) {
         self.progressView.progress = CGFloat(sender.value)
     }
@@ -144,12 +141,11 @@ class ViewController: UIViewController{
             self.navigationController?.pushViewController(ContentViewController(), animated: true)
 
       }
+     
 }
 
-
 extension ViewController {
-    
-    
+
     func authorizeCheck(_ authorizeBlock: @escaping (PHAuthorizationStatus) -> Void) {
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
@@ -165,8 +161,6 @@ extension ViewController {
             authorizeBlock(status)
         }
     }
-    
-    
     func audioAuthorize() -> Bool {
         let status = AVCaptureDevice.authorizationStatus(for: .audio)
         switch status {
@@ -190,12 +184,7 @@ extension ViewController {
         }
         return false
     }
-    
-    
-    
 }
-
-
 
 class WJAuthorize {
     static let shared = WJAuthorize()
@@ -212,17 +201,14 @@ class WJAuthorize {
                     statusBlock(state)
                 })
             })
-            
             statusBlock(status)
         } else {
-            
             statusBlock(status)
         }
-        
     }
+
    
     func videoAuthorize(authorizedBlock: @escaping ()->Void, unAuthorize unAuthorizeBlock: @escaping ()->Void ) {
-        
         AVCaptureDevice.requestAccess(for: .video, completionHandler: { (ist) in
             let status:AVAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
             if status == .authorized {//获得权限
@@ -232,7 +218,6 @@ class WJAuthorize {
             }
         })
     }
-    
     
     // 用户是否开启相机权限
     func authorizeCamaro(authorizeClouse:@escaping (AVAuthorizationStatus)->()){
@@ -253,6 +238,16 @@ class WJAuthorize {
 }
 
 
+extension NSAttributedString {
+    convenience init(html: String) throws {
+        let dic = [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html]
+        guard let data = html.data(using: .utf8) else {
+            self.init()
+            return
+        }
+        try self.init(data: data, options: dic, documentAttributes: nil)
+    }
+}
 
 
 

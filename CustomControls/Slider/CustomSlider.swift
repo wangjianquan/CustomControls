@@ -11,17 +11,21 @@ import UIKit
 //带有刻度的自定义滑块
 class CustomSlider: UISlider {
 
-    //MARK: -- 刻度位置集合
-    @IBInspectable var markPositions:[CGFloat] = []
-    //MARK: -- 刻度颜色
-    @IBInspectable var markColor: UIColor?
-    //MARK: -- 刻度宽度
+    // MARK: - 刻度位置集合
+    @IBInspectable
+    var markPositions: [CGFloat] = []
+    // MARK: - 刻度颜色
+    @IBInspectable
+    var markColor: UIColor?
+    // MARK: - 刻度宽度
     var markWidth: CGFloat?
-    //MARK: -- 左侧轨道的颜色
-    @IBInspectable var leftBarColor: UIColor?
-    //MARK: -- 右侧轨道的颜色
-    @IBInspectable var rightBarColor:UIColor?
-    //MARK: -- 轨道高度
+    // MARK: - 左侧轨道的颜色
+    @IBInspectable
+    var leftBarColor: UIColor?
+    // MARK: - 右侧轨道的颜色
+    @IBInspectable
+    var rightBarColor: UIColor?
+    // MARK: - 轨道高度
     var barHeight: CGFloat?
     
     override init(frame: CGRect) {

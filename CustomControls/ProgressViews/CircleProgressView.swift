@@ -25,21 +25,21 @@ class CircleProgressView: UIView {
         }
     }
     
-    //MARK: -- 圆圈背景颜色
+    // MARK: - 圆圈背景颜色
     @IBInspectable var circleColor: UIColor?
-    //MARK: -- 圆弧背景颜色
+    // MARK: - 圆弧背景颜色
     @IBInspectable var arcColor: UIColor?
   
-    //MARK: -- title文字颜色
+    // MARK: - title文字颜色
     @IBInspectable var titleColor: UIColor?
-    //MARK: -- subTitle文字颜色
+    // MARK: - subTitle文字颜色
     @IBInspectable var subTitleColor: UIColor?
     
-    //MARK: -- title 文字
+    // MARK: - title 文字
     @IBInspectable var title: String?
-    //MARK: -- subTitle 文字
+    // MARK: - subTitle 文字
     @IBInspectable var subTitle: String?
-    //MARK: -- 背景圆圈 宽度
+    // MARK: - 背景圆圈 宽度
     var circleLineWidth: CGFloat?
     
     

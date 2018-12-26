@@ -79,7 +79,7 @@ class AuthorizeSettingVC: UIViewController {
 
 
 extension AuthorizeSettingVC {
-    //MARK: -- 延迟执行
+    // MARK: - 延迟执行
     fileprivate func dispatch_later(block: @escaping ()->()) {
         let t = DispatchTime.now() + 0.2
         DispatchQueue.main.asyncAfter(deadline: t, execute: block)

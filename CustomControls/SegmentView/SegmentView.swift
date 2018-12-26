@@ -138,7 +138,7 @@ class SegmentView: UIView {
 }
 
 
-//MARK: -- UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return self.titles?.count ?? 0
@@ -172,11 +172,9 @@ extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource, UIC
             }
            
       }
-      
-      
-      
+
 }
-//MARK: -- 自定义 layout
+// MARK: - 自定义 layout
 class SegmentViewFlowLayout: UICollectionViewFlowLayout {
       override func prepare() {
             super.prepare()
@@ -188,5 +186,3 @@ class SegmentViewFlowLayout: UICollectionViewFlowLayout {
             collectionView?.showsHorizontalScrollIndicator = false
       }
 }
-
-

@@ -14,12 +14,10 @@ enum AnimateLineOriginType {
     case center
 }
 
-let line_width: CGFloat = 30
+let lineWidth: CGFloat = 30
 let line_height: CGFloat = 2
 
-
 class SelectedView: UIView {
-
    
     var btnCallBack: ((_ seleected_Index: Int) -> ())?
     //未选中文字颜色
@@ -49,8 +47,8 @@ class SelectedView: UIView {
             guard let array = titles else { return  }
             let item_Width = self.frame.size.width / CGFloat(array.count)
             if animateLineOrigin == .center {
-                animateLine.frame.origin.x =  (item_Width - line_width) / 2
-                 animateLine.frame.size.width = line_width
+                animateLine.frame.origin.x =  (item_Width - lineWidth) / 2
+                 animateLine.frame.size.width = lineWidth
             }else{
                 animateLine.frame.origin.x = 0
                 animateLine.frame.size.width = item_Width
@@ -95,19 +93,17 @@ class SelectedView: UIView {
             //默认选中第0个按钮
             self.currentIndex = 0
             if animateLineOrigin == .center {
-                animateLine.frame.origin.x = (item_Width - line_width) / 2
-                animateLine.frame.size.width = line_width
+                animateLine.frame.origin.x = (item_Width - lineWidth) / 2
+                animateLine.frame.size.width = lineWidth
             }else{
                 animateLine.frame.origin.x = 0
                 animateLine.frame.size.width = item_Width
             }
-            
             animateLine.frame.origin.y = item_height - line_height
             animateLine.frame.size.height = line_height
             animateLine.backgroundColor = title_SelectColor
             //添加底部动画view
             self.addSubview(animateLine)
-            
         }
     }
     fileprivate var lastIndex: Int = 0
@@ -128,7 +124,7 @@ class SelectedView: UIView {
                 
                 UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
                     if self.animateLineOrigin == .center {
-                        self.animateLine.frame.origin.x = CGFloat(self.currentIndex) * width + (width - line_width) / 2
+                        self.animateLine.frame.origin.x = CGFloat(self.currentIndex) * width + (width - lineWidth) / 2
                     }else{
                         self.animateLine.frame.origin.x  =  CGFloat(self.currentIndex) * width
                     }

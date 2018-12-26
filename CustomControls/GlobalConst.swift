@@ -103,7 +103,7 @@ let red_Color = UIColor(red: 251/255.0, green: 64/255.0, blue: 71/255.0, alpha: 
 /// 淡蓝色
 let lightBlue = UIColor(red:0.45, green:0.69, blue:0.95, alpha:1.00)
 
-//MARK: -- 内边距EdgeLabel颜色设值
+// MARK: - 内边距EdgeLabel颜色设值
 let Label_Bg_GreenColor = RGB(81, g: 173, b: 73, 0.3)
 let Label_Bg_OrangeColor = RGB(253, g: 152, b: 45, 0.3)
 let Label_Bg_BlueColor = RGB(24, g: 146, b: 216, 0.3)
@@ -126,11 +126,11 @@ let USD = "＄"
 let SwitchRootViewController = "SwitchRootViewController"
 // 推送
 let UqurJpushNotification = "UqurNotificationReceivePush"
-//MARK: -- 发布功能-->通知
+// MARK: - 发布功能-->通知
 let amenitiesNotification = "amenitiesNotification"
 
 //全局函数
-//MARK: -- 自定义全局Log
+// MARK: - 自定义全局Log
 func Dlog<T>(_ message : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
     
     #if DEBUG
@@ -228,7 +228,7 @@ func RGB(_ r:CGFloat,g:CGFloat,b:CGFloat, _ alpha:CGFloat? = nil)->UIColor{
  ** 公共方法
  */
 
-//MARK: -- 文本高度
+// MARK: - 文本高度
 func get_heightForComment(_ str: String) -> CGFloat {
     let rect = NSString(string: str).boundingRect(with: CGSize(width: SCREEN_WIDTH-30, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.init(name: AlkatipBasma, size: 13)!], context: nil)
     return rect.height
@@ -275,7 +275,7 @@ public func getTabBarHeight() -> CGFloat {
  */
 
 
-//MARK: -- 返回随机颜色
+// MARK: - 返回随机颜色
 extension UIColor {
     class var randomColor: UIColor {
         get {
@@ -302,8 +302,7 @@ func getFontName() -> String {
         let fontNames = UIFont.fontNames(forFamilyName:familyName)
         if fontNames.count >= 1 {
             for j in 0...(fontNames.count-1) {
-                let fontName = fontNames[j]
-//                print("\(fontName)")
+                _ = fontNames[j]
             }
         }
     }

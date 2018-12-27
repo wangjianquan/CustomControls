@@ -9,6 +9,9 @@
 #ifndef Bridging_Header_h
 #define Bridging_Header_h
 
+
+#import <objc/runtime.h>
+
 //导入UMCommon的OC的头文件
 #import <UMCommon/UMCommon.h>
 #import <UMCommonLog/UMCommonLogHeaders.h>

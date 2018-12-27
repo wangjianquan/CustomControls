@@ -17,7 +17,7 @@ class ContentViewController: UIViewController {
         segmentView.titles = ["基本的","案件信息","记录", "在册"]
         segmentView.titleSelectedBlock = { [unowned self] (index) in
                   Dlog("\(index)")
-        self.contentScrollView.selectIndex(index: index)
+            self.contentScrollView.selectIndex(index: index)
         }
         return segmentView
         }()

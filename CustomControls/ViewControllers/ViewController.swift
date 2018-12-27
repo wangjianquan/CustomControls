@@ -16,7 +16,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var circlePro: CircleProgressView!
     @IBOutlet weak var placeTextView: UIPlaceHoderTextView!
     
-//    var ar = [2,3,4]
+    @IBOutlet weak var badgeButton: UIButton!
+    //    var ar = [2,3,4]
 
     lazy var selectView: SelectedView = {
         let seleView = SelectedView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
@@ -25,9 +26,10 @@ class ViewController: UIViewController{
         seleView.bgColor = .groupTableViewBackground
         seleView.animateLineOrigin = .center // default is center
         seleView.titles = ["基本信息","案件信息","跟进记录"]
-
         seleView.btnCallBack = { [weak self]  (index) in
             Dlog("点击第\(index)个按钮")
+            self?.badgeBtn.badgeValue = String(format: "%d", (index+1)*10)
+            self?.badgeButton.badgeValue = String(format: "%d", (index+3)*10)
             
         }
         return seleView
@@ -39,6 +41,7 @@ class ViewController: UIViewController{
         searchView.layer.cornerRadius = 3
         searchView.layer.masksToBounds = true
         searchView.placeHolder = "请输入关键字"
+        
         return searchView
     }()
     // MARK: - 测试
@@ -66,6 +69,18 @@ class ViewController: UIViewController{
         titleBtn.addTarget(self, action: #selector(ViewController.titleBtnClick(_:)), for: .touchUpInside)
         return titleBtn
     }()
+
+    lazy var badgeBtn: UIButton = {
+        let badgeBtn = UIButton(frame: CGRect(x: 0, y: 300, width: 88, height: 35))
+        badgeBtn.badgeValue = "120"
+        badgeBtn.badgeBGColor = UIColor.orange
+        badgeBtn.badgeFont = UIFont.systemFont(ofSize: 8)
+        badgeBtn.badgeTextColor = UIColor.black
+        badgeBtn.badgeOriginX = 10
+        badgeBtn.badgeOriginY = -8
+        badgeBtn.setBackgroundImage(UIImage(named: "bg"), for: .normal)
+        return badgeBtn
+    }()
     var bookdata =  Data()
     var infodata =  Data()
      
@@ -78,13 +93,9 @@ class ViewController: UIViewController{
         view.addSubview(selectView)
         view.addSubview(titleBtn)
         view.addSubview(edage)
-
-        let badgeBtn = UIButton(frame: CGRect(x: 0, y: 300, width: 88, height: 35))
-        badgeBtn.badgeValue = "12"
-        badgeBtn.badgeBGColor = .red
-        badgeBtn.backgroundColor = UIColor.black
         view.addSubview(badgeBtn)
 
+        badgeButton.badgeValue = "80"
     }
 
 
@@ -130,6 +141,7 @@ class ViewController: UIViewController{
     }
     @IBAction func valueChange(_ sender: UISlider) {
         self.progressView.progress = CGFloat(sender.value)
+
     }
     
     override func didReceiveMemoryWarning() {

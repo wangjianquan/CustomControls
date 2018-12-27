@@ -10,24 +10,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    @IBInspectable
-    var width : CGFloat{
-        get{ return self.frame.width }
-        set{
-            var frame = self.frame
-            frame.size.width = newValue
-            self.frame = frame
-        }
-    }
-    @IBInspectable
-    var height : CGFloat{
-        get{ return self.frame.height }
-        set{
-            var frame = self.frame
-            frame.size.height = newValue
-            self.frame = frame
-        }
-    }
+
     @IBInspectable
     var x : CGFloat{
         get{ return self.frame.origin.x }
@@ -37,6 +20,7 @@ extension UIView {
             self.frame = frame
         }
     }
+
     @IBInspectable
     var y : CGFloat{
         get{ return self.frame.origin.y }
@@ -46,13 +30,23 @@ extension UIView {
             self.frame = frame
         }
     }
+
     @IBInspectable
-    var size : CGSize {
-        
-        get { return self.frame.size }
-        set {
+    var width : CGFloat{
+        get{ return self.frame.width }
+        set{
             var frame = self.frame
-            frame.size = newValue
+            frame.size.width = newValue
+            self.frame = frame
+        }
+    }
+
+    @IBInspectable
+    var height : CGFloat{
+        get{ return self.frame.height }
+        set{
+            var frame = self.frame
+            frame.size.height = newValue
             self.frame = frame
         }
     }
@@ -72,6 +66,51 @@ extension UIView {
             var center = self.center
             center.y = newValue
             self.center = center
+        }
+    }
+
+    @IBInspectable
+    var size : CGSize {
+        get { return self.frame.size }
+        set {
+            var frame = self.frame
+            frame.size = newValue
+            self.frame = frame
+        }
+    }
+
+    var max_X: CGFloat {
+        get {  return self.frame.maxX }
+        set {
+            var frame  = self.frame
+            frame.origin.x = newValue - frame.size.width
+            self.frame = frame
+        }
+    }
+    var maxY: CGFloat {
+        get {  return self.frame.maxY  }
+        set {
+            var frame  = self.frame
+            frame.origin.y = newValue - frame.size.height
+            self.frame = frame
+        }
+    }
+
+    var middleX: CGFloat {
+        get {  return self.frame.midX }
+        set {
+            var frame  = self.frame
+            frame.origin.x = newValue - frame.size.width/2
+            self.frame = frame
+        }
+    }
+    
+    var middleY: CGFloat {
+        get {  return self.frame.midY  }
+        set {
+            var frame  = self.frame
+            frame.origin.y = newValue - frame.size.height/2
+            self.frame = frame
         }
     }
 

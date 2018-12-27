@@ -8,56 +8,54 @@
 import UIKit
 import Foundation
 
-var UIButton_badgeKey = "UIButton_badgeKey"
-var UIButton_badgeBGColorKey = "UIButton_badgeBGColorKey"
-var UIButton_badgeTextColorKey = "UIButton_badgeTextColorKey"
-var UIButton_badgeFontKey = "UIButton_badgeFontKey"
-var UIButton_badgePaddingKey = "UIButton_badgePaddingKey"
-var UIButton_badgeMinSizeKey = "UIButton_badgeMinSizeKey"
-var UIButton_badgeOriginXKey = "UIButton_badgeOriginXKey"
-var UIButton_badgeOriginYKey = "UIButton_badgeOriginYKey"
-var UIButton_shouldHideBadgeAtZeroKey = "UIButton_shouldHideBadgeAtZeroKey"
-var UIButton_shouldAnimateBadgeKey = "UIButton_shouldAnimateBadgeKey"
-var UIButton_badgeValueKey = "UIButton_badgeValueKey"
+private var UIButton_badgeKey : Void?
+private var UIButton_badgeBGColorKey : Void?
+private var UIButton_badgeTextColorKey : Void?
+private var UIButton_badgeFontKey : Void?
+private var UIButton_badgePaddingKey : Void?
+private var UIButton_badgeMinSizeKey : Void?
+private var UIButton_badgeOriginXKey : Void?
+private var UIButton_badgeOriginYKey : Void?
+private var UIButton_shouldHideBadgeAtZeroKey : Void?
+private var UIButton_shouldAnimateBadgeKey : Void?
+private var UIButton_badgeValueKey : Void?
 
 extension UIButton {
 
-    // MARK: - get {} , set { }
-    var badge: UILabel {
+    // MARK: - 角标
+    fileprivate var badgeLabel: UILabel? {
         get {
-            let label = objc_getAssociatedObject(self, &UIButton_badgeKey) as? UILabel
-            if let lab = label {
-                return lab
-            }
-            return UILabel()
+            return  objc_getAssociatedObject(self, &UIButton_badgeKey) as? UILabel
         }
         set {
-            objc_setAssociatedObject(self, &UIButton_badgeKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UIButton_badgeKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         
     }
 
-    var badgeValue : String  {
+    // MARK: - 角标
+    /**
+     * 角标值
+     */
+    var badgeValue : String?  {
         get{
-            return objc_getAssociatedObject(self, &UIButton_badgeValueKey) as! String
+            return objc_getAssociatedObject(self, &UIButton_badgeValueKey) as? String
         }
 
-        set {
-                objc_setAssociatedObject(self, &UIButton_badgeValueKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        set (badgeValue){
+                objc_setAssociatedObject(self, &UIButton_badgeValueKey, badgeValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
 
-                // When changing the badge value check if we need to remove the badge
-                if badgeValue.isEmpty  || (badgeValue == "") || ((badgeValue == "0") && shouldHideBadgeAtZero) {
+            if (badgeValue?.isEmpty)!   || (badgeValue == "") || ((badgeValue == "0") && shouldHideBadgeAtZero) {
                     removeBadge()
-                } else if (self.badge == nil ) {
+                } else if (self.badgeLabel == nil ) {
 
-                    // Create a new badge because not existing
-                   self.badge  = UILabel(frame: CGRect(x: self.badgeOriginX, y: self.badgeOriginY, width: 20, height: 20))
-                    self.badge.textColor = self.badgeTextColor
-                    self.badge.backgroundColor = self.badgeBGColor
-                    self.badge.font = self.badgeFont
-                    self.badge.textAlignment = .right
+                    self.badgeLabel  = UILabel(frame: CGRect(x: self.badgeOriginX , y: self.badgeOriginY, width: 20, height: 20))
+                    self.badgeLabel?.textColor = self.badgeTextColor
+                    self.badgeLabel?.backgroundColor = self.badgeBGColor
+                    self.badgeLabel?.font = self.badgeFont
+                    self.badgeLabel?.textAlignment = .center
                     badgeInit()
-                    addSubview(self.badge)
+                    addSubview(self.badgeLabel!)
                     updateBadgeValue(animated: false)
                 } else {
                     updateBadgeValue(animated: true)
@@ -66,210 +64,196 @@ extension UIButton {
 
     }
 
-
-
-    // Badge background color
+    /**
+     * Badge background color
+     */
     var badgeBGColor: UIColor? {
         get {
-            return objc_getAssociatedObject(self, &UIButton_badgeBGColorKey) as? UIColor
+            return objc_getAssociatedObject(self, &UIButton_badgeBGColorKey) as? UIColor ?? .red
         }
         set {
-            objc_setAssociatedObject(self, &UIButton_badgeBGColorKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if (self.badge != nil) {
-                refreshBadge()
-            }
-        }
-    }
-    // Badge text color
-    var badgeTextColor: UIColor? {
-        get{
-            return objc_getAssociatedObject(self, &UIButton_badgeTextColorKey) as? UIColor
-        }
-        set{
-            objc_setAssociatedObject(self, &UIButton_badgeTextColorKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if (self.badge != nil) {
-                refreshBadge()
-            }
+            objc_setAssociatedObject(self, &UIButton_badgeBGColorKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if (self.badgeLabel != nil) { refreshBadge() }
         }
     }
 
-
-    // Badge font
-    var badgeFont: UIFont? {
-        get {
-            return objc_getAssociatedObject(self, &UIButton_badgeFontKey) as? UIFont
-        }
-        set{
-            objc_setAssociatedObject(self, &UIButton_badgeFontKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if (self.badge != nil) {
-                refreshBadge()
-            }
-        }
-    }
-    // Padding value for the badge
-    var badgePadding: CGFloat {
-        get{
-            let number  = objc_getAssociatedObject(self, &UIButton_badgePaddingKey) as? CGFloat
-            return number ?? 0
-        }
-        set{
-            let number = Double(newValue)
-            objc_setAssociatedObject(self, &UIButton_badgePaddingKey, number, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if (self.badge != nil) {
-                updateBadgeFrame()
-            }
-
-        }
-    }
-    // Minimum size badge to small
-    var badgeMinSize: CGFloat {
-        get{
-            let number = objc_getAssociatedObject(self, &UIButton_badgeMinSizeKey) as? CGFloat
-            return number ?? 0
-        }
-        set{
-            let number = Double(newValue)
-            objc_setAssociatedObject(self, &UIButton_badgeMinSizeKey, number, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if (self.badge != nil) {
-                updateBadgeFrame()
-            }
-        }
-    }
-
-    var badgeOriginX: CGFloat {
-        get{
-            let number = objc_getAssociatedObject(self, &UIButton_badgeOriginXKey) as? NSNumber
-            return CGFloat(number?.floatValue ?? 10)
-        }
-        set{
-            let number = Double(newValue)
-            objc_setAssociatedObject(self, &UIButton_badgeOriginXKey, number, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if (badge != nil) {
-                updateBadgeFrame()
-            }
-        }
-    }
-
-    var badgeOriginY: CGFloat {
-        get{
-            let number = objc_getAssociatedObject(self, &UIButton_badgeOriginYKey) as? NSNumber
-            return CGFloat(number?.floatValue ?? 10)
-        }
-        set{
-            let number = Double(newValue)
-            objc_setAssociatedObject(self, &UIButton_badgeOriginYKey, number, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            if (self.badge != nil) {
-                updateBadgeFrame()
-            }
-        }
-    }
-
-    // In case of numbers, remove the badge when reaching zero
-    var shouldHideBadgeAtZero: Bool {
-        get {
-            let number = objc_getAssociatedObject(self, &UIButton_shouldHideBadgeAtZeroKey) as? NSNumber
-            return number?.boolValue ?? false
-        }
-        set {
-            let number = NSNumber(booleanLiteral: newValue)
-            objc_setAssociatedObject(self, &UIButton_shouldHideBadgeAtZeroKey, number, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-    // Badge has a bounce animation when value changes
-    var shouldAnimateBadge: Bool {
-        get{
-            let number = objc_getAssociatedObject(self, &UIButton_shouldAnimateBadgeKey) as? NSNumber
-            return number?.boolValue ?? false
-        }
-        set{
-            let number = NSNumber(booleanLiteral: newValue)
-            objc_setAssociatedObject(self, &UIButton_shouldAnimateBadgeKey, number, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-
-
-
-
-    /*
-      **
+    /**
+     * Badge text color
      */
 
+    var badgeTextColor: UIColor? {
+        get{
+            return objc_getAssociatedObject(self, &UIButton_badgeTextColorKey) as? UIColor ?? .white
+        }
+        set{
+            objc_setAssociatedObject(self, &UIButton_badgeTextColorKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if (self.badgeLabel != nil) {  refreshBadge() }
+        }
+    }
 
 
+    /**
+     * Badge font
+     */
+    var badgeFont: UIFont? {
+        get {
+            return objc_getAssociatedObject(self, &UIButton_badgeFontKey) as? UIFont ?? UIFont.systemFont(ofSize: 12)
+        }
+        set{
+            objc_setAssociatedObject(self, &UIButton_badgeFontKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if (self.badgeLabel != nil) { refreshBadge() }
+        }
+    }
 
-    func badgeInit()  {
-        self.badgeBGColor   = .red
-        self.badgeTextColor = .white
-        self.badgeFont      = UIFont.systemFont(ofSize: 12.0)
-        self.badgePadding   = 6
-        self.badgeMinSize   = 8
-//        if let label = self.badge {
-            self.badgeOriginX   = self.frame.size.width - self.badge.frame.size.width/2
-//        }
-        self.badgeOriginY   = -4
-        self.shouldHideBadgeAtZero = true
-        self.shouldAnimateBadge = true
+    /**
+     *  Padding value for the badge
+     */
+    var badgePadding: CGFloat {
+        get{
+            return  objc_getAssociatedObject(self, &UIButton_badgePaddingKey) as? CGFloat ?? 6
+        }
+        set{
+            objc_setAssociatedObject(self, &UIButton_badgePaddingKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if (self.badgeLabel != nil) { updateBadgeFrame() }
+        }
+    }
+
+    /**
+     * badgeLabel 最小尺寸
+     */
+    var badgeMinSize: CGFloat {
+        get{
+            return objc_getAssociatedObject(self, &UIButton_badgeMinSizeKey) as? CGFloat ?? 8
+        }
+        set{
+            objc_setAssociatedObject(self, &UIButton_badgeMinSizeKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if (self.badgeLabel != nil) { updateBadgeFrame() }
+        }
+    }
+
+    /**
+     *  badgeLabel OriginX
+     */
+    var badgeOriginX: CGFloat {
+        get{
+            return objc_getAssociatedObject(self, &UIButton_badgeOriginXKey) as? CGFloat ?? 0
+        }
+        set{
+            objc_setAssociatedObject(self, &UIButton_badgeOriginXKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if (self.badgeLabel != nil) { updateBadgeFrame() }
+        }
+    }
+
+    /**
+     * badgeLabel OriginY
+     */
+    var badgeOriginY: CGFloat  {
+        get{
+            return objc_getAssociatedObject(self, &UIButton_badgeOriginYKey) as? CGFloat ?? -4
+        }
+        set{
+            objc_setAssociatedObject(self, &UIButton_badgeOriginYKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if (self.badgeLabel != nil) { updateBadgeFrame() }
+        }
+    }
+
+    /**
+     * In case of numbers, remove the badge when reaching zero
+     */
+    var shouldHideBadgeAtZero: Bool  {
+        get {
+            return objc_getAssociatedObject(self, &UIButton_shouldHideBadgeAtZeroKey) as? Bool ?? true
+        }
+        set {
+            objc_setAssociatedObject(self, &UIButton_shouldHideBadgeAtZeroKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    /**
+     * Badge has a bounce animation when value changes
+     */
+    var shouldAnimateBadge: Bool {
+        get{
+            return objc_getAssociatedObject(self, &UIButton_shouldAnimateBadgeKey) as? Bool ?? true
+        }
+        set{
+            objc_setAssociatedObject(self, &UIButton_shouldAnimateBadgeKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    
+    fileprivate func badgeInit()  {
+        if let label = self.badgeLabel {
+            self.badgeOriginX   = self.frame.size.width - label.frame.size.width/2
+        }
+        
         self.clipsToBounds = false
     }
 
-    func refreshBadge() {
-        self.badge.textColor = self.badgeTextColor
-        self.badge.backgroundColor  = self.badgeBGColor
-        self.badge.font  = self.badgeFont
+    fileprivate func refreshBadge() {
+        guard let tempLabel = self.badgeLabel else { return }
+        tempLabel.textColor = self.badgeTextColor
+        tempLabel.backgroundColor  = self.badgeBGColor
+        tempLabel.font  = self.badgeFont
     }
 
-    func removeBadge() {
-        // Animate badge removal
+    fileprivate func removeBadge() {
         UIView.animate(withDuration: 0.2, animations: {
-            self.badge.transform = CGAffineTransform.init(scaleX: 0, y: 0)
+            self.badgeLabel?.transform = CGAffineTransform.init(scaleX: 0, y: 0)
         }) { (finished: Bool) in
-            self.badge.removeFromSuperview()
-            self.badge == nil
+            self.badgeLabel?.removeFromSuperview()
+            if (self.badgeLabel != nil) { self.badgeLabel = nil }
         }
     }
 
 
 
-    func updateBadgeValue(animated: Bool) {
-        if animated && self.shouldAnimateBadge && !(self.badge.text == self.badgeValue) {
+    fileprivate func updateBadgeValue(animated: Bool) {
+        if animated && self.shouldAnimateBadge && !(self.badgeLabel?.text == self.badgeValue) {
             let animation = CABasicAnimation(keyPath: "transform.scale")
             animation.fromValue = 1.5
             animation.toValue = 1
             animation.duration = 0.2
             animation.timingFunction = CAMediaTimingFunction(controlPoints: 0.4, 1.3, 1.0, 1.0)
-           self.badge.layer.add(animation, forKey: "bounceAnimation")
+            self.badgeLabel?.layer.add(animation, forKey: "bounceAnimation")
         }
-        self.badge.text = self.badgeValue
+
+        var badgeValue = 0
+        if let badgeStr = self.badgeValue , let value = Int(badgeStr) {
+                badgeValue = value
+        }
+        self.badgeLabel?.text = badgeValue >= 99 ? "99+" : self.badgeValue
+        self.badgeLabel?.text =  self.badgeValue
         let duration: TimeInterval = (animated && self.shouldAnimateBadge) ? 0.2 : 0
         UIView.animate(withDuration: duration, animations: {
             self.updateBadgeFrame()
         })
     }
 
-    func updateBadgeFrame() {
+   fileprivate  func updateBadgeFrame() {
         let expectedLabelSize: CGSize = badgeExpectedSize()
         var minHeight: CGFloat = expectedLabelSize.height
         minHeight = (minHeight < badgeMinSize) ? badgeMinSize : expectedLabelSize.height
         var minWidth: CGFloat = expectedLabelSize.width
         let padding = self.badgePadding
         minWidth = (minWidth < minHeight) ? minHeight : expectedLabelSize.width
-        self.badge.frame = CGRect(x: self.badgeOriginX, y: self.badgeOriginY, width: minWidth + padding, height: minHeight + padding)
-        self.badge.layer.cornerRadius = (minHeight + padding) / 2
-        self.badge.layer.masksToBounds = true
+    self.badgeLabel?.frame = CGRect(x: self.badgeOriginX, y: self.badgeOriginY, width: minWidth + padding, height: minHeight + padding)
+        self.badgeLabel?.layer.cornerRadius = (minHeight + padding) / 2
+        self.badgeLabel?.layer.masksToBounds = true
     }
 
-    func badgeExpectedSize() -> CGSize {
-
-        let frameLabel: UILabel = duplicate(self.badge)
+    fileprivate func badgeExpectedSize() -> CGSize {
+        let frameLabel: UILabel = duplicate(self.badgeLabel)
         frameLabel.sizeToFit()
-        let expectedLabelSize: CGSize? = frameLabel.frame.size
-        return expectedLabelSize ?? CGSize.zero
+        let expectedLabelSize: CGSize = frameLabel.frame.size
+        return expectedLabelSize
     }
 
-    func duplicate(_ labelToCopy: UILabel ) -> UILabel {
-        let duplicateLabel = UILabel(frame: labelToCopy.frame )
-        duplicateLabel.text = labelToCopy.text
-        duplicateLabel.font = labelToCopy.font
+    fileprivate func duplicate(_ labelToCopy: UILabel? ) -> UILabel {
+        guard let temp = labelToCopy else { fatalError("xxxx") }
+        let duplicateLabel = UILabel(frame: temp.frame )
+        duplicateLabel.text = temp.text
+        duplicateLabel.font = temp.font
         return duplicateLabel
     }
 
@@ -277,20 +261,3 @@ extension UIButton {
 }
 
 
-
-extension CALayer {
-    private struct AssociatedKeys {
-        static var shapeLayer:CAShapeLayer?
-    }
-
-    var shapeLayer: CAShapeLayer? {
-        get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.shapeLayer) as? CAShapeLayer
-        }
-        set {
-            if let newValue = newValue {
-                objc_setAssociatedObject(self, &AssociatedKeys.shapeLayer, newValue as CAShapeLayer?, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            }
-        }
-    }
-}

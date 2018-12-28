@@ -2,7 +2,7 @@
 //  UMTool.swift
 //  CustomControls
 //
-//  Created by aixuexue on 2018/11/23.
+//  Created by 白小嘿 on 2018/11/23.
 //  Copyright © 2018 WJQ. All rights reserved.
 //
 

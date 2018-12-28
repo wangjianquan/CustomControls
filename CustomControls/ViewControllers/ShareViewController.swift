@@ -2,7 +2,7 @@
 //  ShareViewController.swift
 //  QKaProject
 //
-//  Created by aixuexue on 2018/11/29.
+//  Created by 白小嘿 on 2018/11/29.
 //  Copyright © 2018 simpleWQZ. All rights reserved.
 //
 

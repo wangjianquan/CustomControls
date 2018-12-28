@@ -2,7 +2,7 @@
 //  SegmentView.swift
 //  CustomControls
 //
-//  Created by aixuexue on 2018/11/24.
+//  Created by 白小嘿 on 2018/11/24.
 //  Copyright © 2018 WJQ. All rights reserved.
 //
 

@@ -24,11 +24,11 @@
 		1C0E7A6D21ABECFC00E0C22B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */; };
 		1C20E8DB21ACF05D006D6656 /* WJSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C20E8DA21ACF05D006D6656 /* WJSegmentedControl.swift */; };
 		1C49CBBB21D3694F005017D9 /* UIButton+badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C49CBBA21D3694F005017D9 /* UIButton+badge.swift */; };
+		1C7EBC5B21D5B64C0079BB49 /* BadgeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7EBC5A21D5B64C0079BB49 /* BadgeBarButtonItem.swift */; };
 		1C98679921A7CA55009AE3F1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98679821A7CA55009AE3F1 /* libz.tbd */; };
 		1C98679B21A7CA78009AE3F1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98679A21A7CA78009AE3F1 /* libc++.tbd */; };
 		1CC3AE6321A938660004F0C8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3AE6221A938660004F0C8 /* UIColor+Extension.swift */; };
 		1CC3AE8521A948940004F0C8 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC3AE8421A948940004F0C8 /* SegmentView.swift */; };
-		1CE2BBDC21D4D7760089F2C3 /* UIBarButtonItem + badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2BBDB21D4D7760089F2C3 /* UIBarButtonItem + badge.swift */; };
 		1CF2EED921AFC4E200149237 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF2EED821AFC4E200149237 /* ShareViewController.swift */; };
 		1CF2EEDB21AFC53F00149237 /* FromBottomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF2EEDA21AFC53F00149237 /* FromBottomAnimator.swift */; };
 		7C11DBC3216C5AB20055E5A4 /* FirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C11DBBF216C5AB20055E5A4 /* FirstVC.xib */; };
@@ -72,11 +72,11 @@
 		1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		1C20E8DA21ACF05D006D6656 /* WJSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WJSegmentedControl.swift; sourceTree = "<group>"; };
 		1C49CBBA21D3694F005017D9 /* UIButton+badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+badge.swift"; sourceTree = "<group>"; };
+		1C7EBC5A21D5B64C0079BB49 /* BadgeBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBarButtonItem.swift; sourceTree = "<group>"; };
 		1C98679821A7CA55009AE3F1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1C98679A21A7CA78009AE3F1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1CC3AE6221A938660004F0C8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1CC3AE8421A948940004F0C8 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
-		1CE2BBDB21D4D7760089F2C3 /* UIBarButtonItem + badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem + badge.swift"; sourceTree = "<group>"; };
 		1CF2EED821AFC4E200149237 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		1CF2EEDA21AFC53F00149237 /* FromBottomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromBottomAnimator.swift; sourceTree = "<group>"; };
 		1E940777E0D60E37914945D9 /* Pods_CustomControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,7 +198,7 @@
 			children = (
 				7C522F462154E1FB009A8261 /* TitleButton.swift */,
 				1C49CBBA21D3694F005017D9 /* UIButton+badge.swift */,
-				1CE2BBDB21D4D7760089F2C3 /* UIBarButtonItem + badge.swift */,
+				1C7EBC5A21D5B64C0079BB49 /* BadgeBarButtonItem.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -437,6 +437,7 @@
 				1CC3AE6321A938660004F0C8 /* UIColor+Extension.swift in Sources */,
 				1C07B22E21A7925900D86591 /* UMTool.swift in Sources */,
 				1C07B21F21A791BD00D86591 /* UIView+Extention.swift in Sources */,
+				1C7EBC5B21D5B64C0079BB49 /* BadgeBarButtonItem.swift in Sources */,
 				7CBD22FF2160CD4E00599509 /* GlobalConst.swift in Sources */,
 				7C522F4D2154E1FB009A8261 /* CircleProgressView.swift in Sources */,
 				1C49CBBB21D3694F005017D9 /* UIButton+badge.swift in Sources */,
@@ -450,7 +451,6 @@
 				1C0E7A6921ABC67300E0C22B /* SegmentCollectionCell.swift in Sources */,
 				1C07B21B21A791B600D86591 /* AuthorizeTool.swift in Sources */,
 				1CF2EEDB21AFC53F00149237 /* FromBottomAnimator.swift in Sources */,
-				1CE2BBDC21D4D7760089F2C3 /* UIBarButtonItem + badge.swift in Sources */,
 				1C0E7A6D21ABECFC00E0C22B /* ContentViewController.swift in Sources */,
 				7CD79EA51F135A280046D461 /* CustomSlider.swift in Sources */,
 				7C11DBC6216C5AB20055E5A4 /* SecondVC.swift in Sources */,

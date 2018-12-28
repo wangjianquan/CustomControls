@@ -88,7 +88,7 @@ class ViewController: UIViewController{
       
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
+ self.navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
         self.navigationItem.titleView = naviSearchView
         view.addSubview(selectView)
         view.addSubview(titleBtn)

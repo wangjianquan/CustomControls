@@ -80,7 +80,19 @@ class DragViewController: UIViewController {
         return field
     }()
     
-   
+    ///设置状态栏背景颜色
+    func setStatusBarBackgroundColor(color : UIColor) {
+        let statusBarWindow : UIView = UIApplication.shared.value(forKey: "statusBarWindow") as! UIView
+        let statusBar : UIView = statusBarWindow.value(forKey: "statusBar") as! UIView
+        /*
+         if statusBar.responds(to:Selector("setBackgroundColor:")) {
+         statusBar.backgroundColor = color
+         }*/
+        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = color
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
@@ -94,8 +106,23 @@ class DragViewController: UIViewController {
 
         //拖动手势
         circle.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(dragCircle)))
-        
-        
+
+       setStatusBarBackgroundColor(color: .green)
+
+        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        btn.setImage(UIImage(named: "img_search"), for: .normal)
+        btn.backgroundColor = .yellow
+        let rightButton = BadgeBarButtonItem(customButton: btn)
+        rightButton.badgeValue = "100";
+//        rightButton.badgeOriginX = 7;
+        rightButton.badgeOriginY = -7;
+//        rightButton.badgeBGColor = .blue
+//        rightButton.badgeTextColor = .white
+//        rightButton.badgeFont = UIFont.systemFont(ofSize: 12)
+//        rightButton.badgePadding = 6
+//        rightButton.badgeMinSize = 5
+        // Add it as the leftBarButtonItem of the navigation bar
+        self.navigationItem.rightBarButtonItem = rightButton
     }
     
     override func viewWillAppear(_ animated: Bool) {

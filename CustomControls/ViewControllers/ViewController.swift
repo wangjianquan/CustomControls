@@ -95,7 +95,7 @@ class ViewController: UIViewController{
       
     override func viewDidLoad() {
         super.viewDidLoad()
- self.navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
+        self.navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
         self.navigationItem.titleView = naviSearchView
         view.addSubview(selectView)
         view.addSubview(titleBtn)
@@ -103,6 +103,8 @@ class ViewController: UIViewController{
         view.addSubview(badgeBtn)
 
         badgeButton.badgeValue = "80"
+        
+       
     }
 
 
@@ -178,6 +180,8 @@ extension ViewController {
             authorizeBlock(status)
         case .denied,.restricted :
             authorizeBlock(status)
+         default:
+            break
         }
     }
     func audioAuthorize() -> Bool {

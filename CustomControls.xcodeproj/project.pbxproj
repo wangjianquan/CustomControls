@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121B255423BF47FD000EB096 /* GCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B255323BF47FD000EB096 /* GCDTimer.swift */; };
+		121B255723BF4BA1000EB096 /* ALGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B255623BF4BA1000EB096 /* ALGCDTimer.m */; };
 		1C0760FF21CC81B60004E4EC /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0760FE21CC81B60004E4EC /* AppStoreReviewManager.swift */; };
 		1C07610221CC87180004E4EC /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C07610121CC87180004E4EC /* Intents.framework */; };
 		1C07B21B21A791B600D86591 /* AuthorizeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C07B21A21A791B600D86591 /* AuthorizeTool.swift */; };
@@ -66,6 +68,9 @@
 
 /* Begin PBXFileReference section */
 		0C0208252D9E8D510E4267A8 /* Pods-CustomControls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomControls.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomControls/Pods-CustomControls.release.xcconfig"; sourceTree = "<group>"; };
+		121B255323BF47FD000EB096 /* GCDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDTimer.swift; sourceTree = "<group>"; };
+		121B255523BF4BA1000EB096 /* ALGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALGCDTimer.h; sourceTree = "<group>"; };
+		121B255623BF4BA1000EB096 /* ALGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALGCDTimer.m; sourceTree = "<group>"; };
 		1C01F0AE21A67E29001C2ECD /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		1C0760FE21CC81B60004E4EC /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		1C07610021CC86BB0004E4EC /* CustomControls.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomControls.entitlements; sourceTree = "<group>"; };
@@ -149,6 +154,9 @@
 				1C07B21A21A791B600D86591 /* AuthorizeTool.swift */,
 				1C07B21921A790F600D86591 /* Extension */,
 				1C07B22D21A7925900D86591 /* UMTool.swift */,
+				121B255523BF4BA1000EB096 /* ALGCDTimer.h */,
+				121B255623BF4BA1000EB096 /* ALGCDTimer.m */,
+				121B255323BF47FD000EB096 /* GCDTimer.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -167,15 +175,15 @@
 		1C07B22021A791D200D86591 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1C07B22221A791D200D86591 /* ViewController.swift */,
-				1C07B22121A791D200D86591 /* AuthorizeSettingVC.swift */,
 				1C0760FE21CC81B60004E4EC /* AppStoreReviewManager.swift */,
-				1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */,
+				1C07B22121A791D200D86591 /* AuthorizeSettingVC.swift */,
 				1C07B22321A791D200D86591 /* AuthorizeSettingVC.xib */,
-				1C07B22421A791D200D86591 /* SlidersViewController.swift */,
-				1CF2EED821AFC4E200149237 /* ShareViewController.swift */,
-				1CF2EEDA21AFC53F00149237 /* FromBottomAnimator.swift */,
+				1C0E7A6C21ABECFC00E0C22B /* ContentViewController.swift */,
 				1C07B22521A791D200D86591 /* DragViewController.swift */,
+				1CF2EEDA21AFC53F00149237 /* FromBottomAnimator.swift */,
+				1CF2EED821AFC4E200149237 /* ShareViewController.swift */,
+				1C07B22421A791D200D86591 /* SlidersViewController.swift */,
+				1C07B22221A791D200D86591 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -531,12 +539,14 @@
 				1C20E8DB21ACF05D006D6656 /* WJSegmentedControl.swift in Sources */,
 				7C522F4C2154E1FB009A8261 /* ProgressView.swift in Sources */,
 				7C11DBC5216C5AB20055E5A4 /* FirstVC.swift in Sources */,
+				121B255723BF4BA1000EB096 /* ALGCDTimer.m in Sources */,
 				1C07B22C21A791F800D86591 /* AppDelegate.swift in Sources */,
 				1CF2EED921AFC4E200149237 /* ShareViewController.swift in Sources */,
 				1C07B22A21A791D200D86591 /* DragViewController.swift in Sources */,
 				1C0E7A6921ABC67300E0C22B /* SegmentCollectionCell.swift in Sources */,
 				1C07B21B21A791B600D86591 /* AuthorizeTool.swift in Sources */,
 				1CF2EEDB21AFC53F00149237 /* FromBottomAnimator.swift in Sources */,
+				121B255423BF47FD000EB096 /* GCDTimer.swift in Sources */,
 				1C0E7A6D21ABECFC00E0C22B /* ContentViewController.swift in Sources */,
 				7CD79EA51F135A280046D461 /* CustomSlider.swift in Sources */,
 				7C11DBC6216C5AB20055E5A4 /* SecondVC.swift in Sources */,

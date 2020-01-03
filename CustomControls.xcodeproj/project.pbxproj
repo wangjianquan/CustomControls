@@ -42,6 +42,19 @@
 		7C522F4F2154E1FB009A8261 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C522F482154E1FB009A8261 /* SearchView.swift */; };
 		7C522F502154E1FB009A8261 /* EdgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C522F4A2154E1FB009A8261 /* EdgeLabel.swift */; };
 		7C522F532154E232009A8261 /* UIPlaceHoderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C522F522154E232009A8261 /* UIPlaceHoderTextView.swift */; };
+		7CADDE2923B4FCA700873D61 /* MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADDE2823B4FCA700873D61 /* MBProgressHUD.swift */; };
+		7CADDE3623B4FCB200873D61 /* angle-mask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE2A23B4FCB000873D61 /* angle-mask@3x.png */; };
+		7CADDE3723B4FCB200873D61 /* angle-mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE2B23B4FCB000873D61 /* angle-mask@2x.png */; };
+		7CADDE3823B4FCB200873D61 /* info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE2C23B4FCB000873D61 /* info@3x.png */; };
+		7CADDE3923B4FCB200873D61 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE2D23B4FCB100873D61 /* success.png */; };
+		7CADDE3A23B4FCB200873D61 /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE2E23B4FCB100873D61 /* success@2x.png */; };
+		7CADDE3B23B4FCB200873D61 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE2F23B4FCB100873D61 /* info.png */; };
+		7CADDE3C23B4FCB200873D61 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE3023B4FCB100873D61 /* info@2x.png */; };
+		7CADDE3D23B4FCB200873D61 /* success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE3123B4FCB100873D61 /* success@3x.png */; };
+		7CADDE3E23B4FCB200873D61 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE3223B4FCB200873D61 /* error.png */; };
+		7CADDE3F23B4FCB200873D61 /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE3323B4FCB200873D61 /* error@2x.png */; };
+		7CADDE4023B4FCB200873D61 /* error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE3423B4FCB200873D61 /* error@3x.png */; };
+		7CADDE4123B4FCB200873D61 /* angle-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CADDE3523B4FCB200873D61 /* angle-mask.png */; };
 		7CBD22FD21609E5100599509 /* FloatTitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBD22FC21609E5100599509 /* FloatTitleTextField.swift */; };
 		7CBD22FF2160CD4E00599509 /* GlobalConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBD22FE2160CD4D00599509 /* GlobalConst.swift */; };
 		7CBFFC1921491C8900A03A65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CBFFC1821491C8900A03A65 /* Main.storyboard */; };
@@ -91,6 +104,19 @@
 		7C522F482154E1FB009A8261 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7C522F4A2154E1FB009A8261 /* EdgeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeLabel.swift; sourceTree = "<group>"; };
 		7C522F522154E232009A8261 /* UIPlaceHoderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPlaceHoderTextView.swift; sourceTree = "<group>"; };
+		7CADDE2823B4FCA700873D61 /* MBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBProgressHUD.swift; sourceTree = "<group>"; };
+		7CADDE2A23B4FCB000873D61 /* angle-mask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@3x.png"; sourceTree = "<group>"; };
+		7CADDE2B23B4FCB000873D61 /* angle-mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@2x.png"; sourceTree = "<group>"; };
+		7CADDE2C23B4FCB000873D61 /* info@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@3x.png"; sourceTree = "<group>"; };
+		7CADDE2D23B4FCB100873D61 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
+		7CADDE2E23B4FCB100873D61 /* success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@2x.png"; sourceTree = "<group>"; };
+		7CADDE2F23B4FCB100873D61 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		7CADDE3023B4FCB100873D61 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
+		7CADDE3123B4FCB100873D61 /* success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@3x.png"; sourceTree = "<group>"; };
+		7CADDE3223B4FCB200873D61 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		7CADDE3323B4FCB200873D61 /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@2x.png"; sourceTree = "<group>"; };
+		7CADDE3423B4FCB200873D61 /* error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@3x.png"; sourceTree = "<group>"; };
+		7CADDE3523B4FCB200873D61 /* angle-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask.png"; sourceTree = "<group>"; };
 		7CBD22FC21609E5100599509 /* FloatTitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatTitleTextField.swift; sourceTree = "<group>"; };
 		7CBD22FE2160CD4D00599509 /* GlobalConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConst.swift; sourceTree = "<group>"; };
 		7CBFFC1821491C8900A03A65 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +156,7 @@
 		1C07B21921A790F600D86591 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7CADDE2623B4FCA700873D61 /* CusMBProgressHUD */,
 				1C07B21C21A791BD00D86591 /* UIAlertController+TextField.swift */,
 				1C07B21D21A791BD00D86591 /* UIView+Extention.swift */,
 				1CC3AE6221A938660004F0C8 /* UIColor+Extension.swift */,
@@ -228,6 +255,34 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		7CADDE2623B4FCA700873D61 /* CusMBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7CADDE2823B4FCA700873D61 /* MBProgressHUD.swift */,
+				7CADDE2723B4FCA700873D61 /* images */,
+			);
+			path = CusMBProgressHUD;
+			sourceTree = "<group>";
+		};
+		7CADDE2723B4FCA700873D61 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7CADDE3523B4FCB200873D61 /* angle-mask.png */,
+				7CADDE2B23B4FCB000873D61 /* angle-mask@2x.png */,
+				7CADDE2A23B4FCB000873D61 /* angle-mask@3x.png */,
+				7CADDE3223B4FCB200873D61 /* error.png */,
+				7CADDE3323B4FCB200873D61 /* error@2x.png */,
+				7CADDE3423B4FCB200873D61 /* error@3x.png */,
+				7CADDE2F23B4FCB100873D61 /* info.png */,
+				7CADDE3023B4FCB100873D61 /* info@2x.png */,
+				7CADDE2C23B4FCB000873D61 /* info@3x.png */,
+				7CADDE2D23B4FCB100873D61 /* success.png */,
+				7CADDE2E23B4FCB100873D61 /* success@2x.png */,
+				7CADDE3123B4FCB100873D61 /* success@3x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		7CBD22FB21609DD900599509 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +366,7 @@
 				7CD79E891F1359DB0046D461 /* Frameworks */,
 				7CD79E8A1F1359DB0046D461 /* Resources */,
 				6E50FEA16AAF83EF364528A6 /* [CP] Copy Pods Resources */,
+				B75B4A430C8FF7AE322991D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -328,12 +384,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = WJQ;
 				TargetAttributes = {
 					7CD79E8B1F1359DB0046D461 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = J62FEE96YX;
+						DevelopmentTeam = KJ48WR2Q9M;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -349,6 +405,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -367,12 +424,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CADDE3823B4FCB200873D61 /* info@3x.png in Resources */,
+				7CADDE3D23B4FCB200873D61 /* success@3x.png in Resources */,
+				7CADDE3A23B4FCB200873D61 /* success@2x.png in Resources */,
+				7CADDE3F23B4FCB200873D61 /* error@2x.png in Resources */,
 				7C11DBC4216C5AB20055E5A4 /* SecondVC.xib in Resources */,
 				7CBFFC1921491C8900A03A65 /* Main.storyboard in Resources */,
 				7C11DBC3216C5AB20055E5A4 /* FirstVC.xib in Resources */,
 				1C07B22821A791D200D86591 /* AuthorizeSettingVC.xib in Resources */,
+				7CADDE3C23B4FCB200873D61 /* info@2x.png in Resources */,
 				7CD79E9A1F1359DB0046D461 /* LaunchScreen.storyboard in Resources */,
+				7CADDE3623B4FCB200873D61 /* angle-mask@3x.png in Resources */,
+				7CADDE4023B4FCB200873D61 /* error@3x.png in Resources */,
+				7CADDE3923B4FCB200873D61 /* success.png in Resources */,
+				7CADDE4123B4FCB200873D61 /* angle-mask.png in Resources */,
+				7CADDE3E23B4FCB200873D61 /* error.png in Resources */,
+				7CADDE3723B4FCB200873D61 /* angle-mask@2x.png in Resources */,
 				7CD79E971F1359DB0046D461 /* Assets.xcassets in Resources */,
+				7CADDE3B23B4FCB200873D61 /* info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,21 +475,37 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CustomControls/Pods-CustomControls-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CustomControls/Pods-CustomControls-resources.sh",
 				"${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMCommonLog.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomControls/Pods-CustomControls-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomControls/Pods-CustomControls-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B75B4A430C8FF7AE322991D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomControls/Pods-CustomControls-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomControls/Pods-CustomControls-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -437,6 +522,7 @@
 				1CC3AE6321A938660004F0C8 /* UIColor+Extension.swift in Sources */,
 				1C07B22E21A7925900D86591 /* UMTool.swift in Sources */,
 				1C07B21F21A791BD00D86591 /* UIView+Extention.swift in Sources */,
+				7CADDE2923B4FCA700873D61 /* MBProgressHUD.swift in Sources */,
 				1C7EBC5B21D5B64C0079BB49 /* BadgeBarButtonItem.swift in Sources */,
 				7CBD22FF2160CD4E00599509 /* GlobalConst.swift in Sources */,
 				7C522F4D2154E1FB009A8261 /* CircleProgressView.swift in Sources */,
@@ -483,6 +569,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -534,7 +621,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -542,6 +629,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -585,7 +673,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -596,14 +684,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CustomControls/CustomControls.entitlements;
-				DEVELOPMENT_TEAM = J62FEE96YX;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KJ48WR2Q9M;
 				INFOPLIST_FILE = CustomControls/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjq.CustomControls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CustomControls/Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -613,14 +704,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CustomControls/CustomControls.entitlements;
-				DEVELOPMENT_TEAM = J62FEE96YX;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KJ48WR2Q9M;
 				INFOPLIST_FILE = CustomControls/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjq.CustomControls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CustomControls/Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

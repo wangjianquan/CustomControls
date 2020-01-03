@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="naO-z2-cUq">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="naO-z2-cUq">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomControls" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zra-aT-Qrc">
-                                <rect key="frame" x="18" y="558" width="339" height="31"/>
+                                <rect key="frame" x="18" y="578" width="339" height="31"/>
                                 <connections>
                                     <action selector="valueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="vlI-ig-BZ5"/>
                                 </connections>
                             </slider>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wo1-Q2-oa2" customClass="ProgressView" customModule="CustomControls" customModuleProvider="target">
-                                <rect key="frame" x="20" y="455" width="88" height="88"/>
+                                <rect key="frame" x="20" y="475" width="88" height="88"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="BLn-hg-44z"/>
@@ -33,7 +31,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MFf-fU-Epp" customClass="UIPlaceHoderTextView" customModule="CustomControls" customModuleProvider="target">
-                                <rect key="frame" x="128" y="455" width="227" height="88"/>
+                                <rect key="frame" x="128" y="475" width="227" height="88"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -44,7 +42,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLx-b3-2Q9" customClass="SearchView" customModule="CustomControls" customModuleProvider="target">
-                                <rect key="frame" x="20" y="385" width="335" height="50"/>
+                                <rect key="frame" x="20" y="405" width="335" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VxI-Gm-Uu0"/>
@@ -67,7 +65,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIS-8p-z3k" customClass="CircleProgressView" customModule="CustomControls" customModuleProvider="target">
-                                <rect key="frame" x="123.5" y="237" width="128" height="128"/>
+                                <rect key="frame" x="123.5" y="257" width="128" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vIS-8p-z3k" secondAttribute="height" multiplier="1:1" id="8YI-gE-fJu"/>
@@ -169,22 +167,22 @@
             <objects>
                 <viewController id="ZQv-gV-7yt" customClass="SlidersViewController" customModule="CustomControls" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ud-bC-147">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cxR-6i-lgE">
-                                <rect key="frame" x="15" y="444" width="345" height="144"/>
+                                <rect key="frame" x="15" y="15" width="345" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="yf0-Fn-Y3P">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="任意文本(包括空字符串)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZOo-zJ-Uv3">
-                                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh0-iS-AsS">
-                                                <rect key="frame" x="174" y="0.0" width="171" height="30"/>
+                                                <rect key="frame" x="174" y="0.0" width="171" height="34"/>
                                                 <state key="normal" title="任意文本(包括空字符串)"/>
                                                 <connections>
                                                     <action selector="anythingAction:" destination="ZQv-gV-7yt" eventType="touchUpInside" id="iaW-0V-h6f"/>
@@ -193,16 +191,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="FxD-Uu-oWs">
-                                        <rect key="frame" x="0.0" y="38" width="345" height="30"/>
+                                        <rect key="frame" x="0.0" y="42" width="345" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="非空文本" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-HK-2jV">
-                                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG4-en-ygt">
-                                                <rect key="frame" x="174" y="0.0" width="171" height="30"/>
+                                                <rect key="frame" x="174" y="0.0" width="171" height="34"/>
                                                 <state key="normal" title="非空"/>
                                                 <connections>
                                                     <action selector="stringlength:" destination="ZQv-gV-7yt" eventType="touchUpInside" id="5lN-C3-ylf"/>
@@ -211,16 +208,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="PTn-ww-vtD">
-                                        <rect key="frame" x="0.0" y="76" width="345" height="30"/>
+                                        <rect key="frame" x="0.0" y="84" width="345" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="符合正则表达式的文本" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FBb-Kf-xqz">
-                                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB1-fc-WQG">
-                                                <rect key="frame" x="174" y="0.0" width="171" height="30"/>
+                                                <rect key="frame" x="174" y="0.0" width="171" height="34"/>
                                                 <state key="normal" title="符合正则表达式的文本"/>
                                                 <connections>
                                                     <action selector="emailAction:" destination="ZQv-gV-7yt" eventType="touchUpInside" id="bmm-wg-eCs"/>
@@ -229,16 +225,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZ0-bW-Tfm">
-                                        <rect key="frame" x="0.0" y="114" width="345" height="30"/>
+                                        <rect key="frame" x="0.0" y="126" width="345" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="电话号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BpL-RR-aRD">
-                                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="30"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VY5-qV-4sz">
-                                                <rect key="frame" x="172.5" y="0.0" width="172.5" height="30"/>
+                                                <rect key="frame" x="172.5" y="0.0" width="172.5" height="34"/>
                                                 <state key="normal" title="电话号码"/>
                                                 <connections>
                                                     <action selector="phoneNumber:" destination="ZQv-gV-7yt" eventType="touchUpInside" id="Y33-Uh-8Ka"/>
@@ -271,8 +266,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qWR-VK-iea" firstAttribute="bottom" secondItem="cxR-6i-lgE" secondAttribute="bottom" constant="15" id="EOu-or-uBt"/>
                             <constraint firstItem="cxR-6i-lgE" firstAttribute="leading" secondItem="qWR-VK-iea" secondAttribute="leading" constant="15" id="Hnq-G6-pLr"/>
+                            <constraint firstItem="cxR-6i-lgE" firstAttribute="top" secondItem="qWR-VK-iea" secondAttribute="top" constant="15" id="Rhh-Af-vJI"/>
                             <constraint firstItem="qWR-VK-iea" firstAttribute="trailing" secondItem="cxR-6i-lgE" secondAttribute="trailing" constant="15" id="WbC-mK-eaB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qWR-VK-iea"/>
@@ -295,7 +290,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="naO-z2-cUq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="S45-vL-8OE">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>

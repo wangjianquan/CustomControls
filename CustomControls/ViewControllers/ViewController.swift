@@ -30,7 +30,14 @@ class ViewController: UIViewController{
             Dlog("点击第\(index)个按钮")
             self?.badgeBtn.badgeValue = String(format: "%d", (index+1)*10)
             self?.badgeButton.badgeValue = String(format: "%d", (index+3)*10)
-            
+            if index == 0 {
+                MBProgressHUD.showMessage("\(seleView.titles![index])", HUDMessagePosition.top,toView: nil)
+
+            }else if index == 1 {
+                MBProgressHUD.showSuccess("success success success success successsuccess success success success success")
+            }else{
+                MBProgressHUD.showMessage("\(seleView.titles![index])", HUDMessagePosition.bottom,toView: nil)
+            }
         }
         return seleView
     }()

@@ -59,11 +59,11 @@ class AuthorizeTool: NSObject {
                 })
             }
             return false
-        case .authorized:
-            return true
         case .denied, .restricted :
             popVC(.video)
             return false
+        default :
+            return true//authorized
         }
     }
     // MARK: - 麦克风权限
@@ -78,11 +78,11 @@ class AuthorizeTool: NSObject {
                 })
             }
             return false
-        case .authorized:
-            return true
         case .denied, .restricted :
             popVC(.audio)
            return false
+        default :
+            return true //.authorized:
         }
     }
     

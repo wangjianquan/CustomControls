@@ -24,6 +24,7 @@
 #import <UMAnalytics/DplusMobClick.h>
 #import <UMAnalytics/MobClick.h>
 #import <UMAnalytics/MobClickGameAnalytics.h>
+#import "MBProgressHUD.h"
 
 
 #import <Bugly/Bugly.h>

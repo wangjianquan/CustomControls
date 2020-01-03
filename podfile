@@ -6,6 +6,8 @@ target 'CustomControls' do
   use_frameworks!
 
   # Pods for CustomControls
+    pod 'SVProgressHUD'
+    pod 'MBProgressHUD'
   #  UM 基础库
     pod 'UMCCommon'
     pod 'UMCCommonLog'

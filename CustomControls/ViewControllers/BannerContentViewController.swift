@@ -79,6 +79,7 @@ class BannerContentViewController: UIViewController {
             let str = images[x]
             createIndicator(str, at: point)
         }
+//        infiniteScrollView.contentSize = CGSize(width: CGFloat(width) + infiniteScrollView.frame.size.width, height: 0)
 
         // 更新 infiniteScrollView 的 contentSize
         let content_width = Double(images.count + 1) * (gap + dx) + Double(infiniteScrollView.frame.width)-2*dx

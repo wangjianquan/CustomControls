@@ -103,13 +103,14 @@ class ViewController: UIViewController{
         view.addSubview(titleBtn)
         view.addSubview(edage)
         view.addSubview(badgeBtn)
-
         badgeButton.badgeValue = "80"
         
        
     }
 
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
       
 //    let authorizeTool = AuthorizeTool.sharedInstance
     

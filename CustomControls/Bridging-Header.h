@@ -28,5 +28,7 @@
 
 
 #import <Bugly/Bugly.h>
+#import "ALGCDTimer.h"
+
 
 #endif /* Bridging_Header_h */

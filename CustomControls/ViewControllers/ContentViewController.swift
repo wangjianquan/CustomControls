@@ -14,7 +14,7 @@ class ContentViewController: UIViewController {
 
     lazy var segmentView: SegmentView = {
         let segmentView = SegmentView(frame:  CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
-        segmentView.titles = ["基本的","案件信息","记录", "在册"]
+        segmentView.titles = ["基本的","案件信息","记录"]
         segmentView.titleSelectedBlock = { [unowned self] (index) in
                   Dlog("\(index)")
             self.contentScrollView.selectIndex(index: index)

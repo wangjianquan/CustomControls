@@ -22,7 +22,7 @@ extension MBProgressHUD {
             let hud = MBProgressHUD.showAdded(to: toView ?? window!, animated: true)
             hud.label.text = text
             hud.label.textColor = UIColor(white: 1, alpha: 0.7)
-            hud.bezelView.color = .white
+//            hud.bezelView.color = .white
             if toView == nil || toView == window {
                 switch position {
                 case .top:

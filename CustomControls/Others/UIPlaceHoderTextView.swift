@@ -21,14 +21,16 @@ class UIPlaceHoderTextView: UITextView {
         return placeholderLabel
     }()
     
-    @IBInspectable var placeholderColor: UIColor? = UIColor.lightText{
+    @IBInspectable
+    var placeholderColor: UIColor? = UIColor.lightText{
         didSet{
             guard let textColor = placeholderColor else { return }
             placeHolderLabel.textColor = textColor
         }
     }
     
-    @IBInspectable var placeHolder:String? = "请输入内容..." {
+    @IBInspectable
+    var placeHolder:String? = "请输入内容..." {
         didSet{
             guard let str = placeHolder else {return}
             placeHolderLabel.text = str

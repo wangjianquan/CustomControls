@@ -32,11 +32,13 @@ class ViewController: UIViewController{
             self?.badgeButton.badgeValue = String(format: "%d", (index+3)*10)
             if index == 0 {
                 MBProgressHUD.showMessage("\(seleView.titles![index])", HUDMessagePosition.top,toView: nil)
+                MBProgressHUD.showMessage("\(seleView.titles![index])", HUDMessagePosition.bottom,toView: nil)
 
             }else if index == 1 {
                 MBProgressHUD.showSuccess("success success success success successsuccess success success success success")
             }else{
-                MBProgressHUD.showMessage("\(seleView.titles![index])", HUDMessagePosition.bottom,toView: nil)
+                let bannerVC = BannerContentViewController()
+                self?.navigationController?.pushViewController(bannerVC, animated: true)
             }
         }
         return seleView
@@ -95,17 +97,20 @@ class ViewController: UIViewController{
       
     override func viewDidLoad() {
         super.viewDidLoad()
- self.navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
+        self.navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
         self.navigationItem.titleView = naviSearchView
         view.addSubview(selectView)
         view.addSubview(titleBtn)
         view.addSubview(edage)
         view.addSubview(badgeBtn)
-
         badgeButton.badgeValue = "80"
+        
+       
     }
 
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
       
 //    let authorizeTool = AuthorizeTool.sharedInstance
     
@@ -178,6 +183,8 @@ extension ViewController {
             authorizeBlock(status)
         case .denied,.restricted :
             authorizeBlock(status)
+         default:
+            break
         }
     }
     func audioAuthorize() -> Bool {

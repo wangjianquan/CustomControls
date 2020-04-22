@@ -152,6 +152,7 @@ extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource, UIC
             cell?.isSeleted = indexPath.row == selectedIndex ? true : false
             cell?.titleLabel.textColor = cell?.isSeleted == true ? self.titleSelectColor : self.titleNormalColor
             cell?.bottomLineColor = self.colorIsSame == true ? cell?.titleLabel.textColor : self.bottomLineColor
+        cell?.titleLabel
             if let title = self.titles?[indexPath.row] {
                   cell?.titleLabel.text = title
             }

@@ -10,7 +10,9 @@ import UIKit
 
 class SegmentCollectionCell: UICollectionViewCell {
     
-       //  标签label
+    /**
+     * 标题
+     */
       lazy var titleLabel: UILabel = {
             let label = UILabel.init()
             label.textAlignment = .center
@@ -19,16 +21,15 @@ class SegmentCollectionCell: UICollectionViewCell {
             return label
       }()
       
-      //  当前是否被选中
-      var isSeleted: Bool = true {
-            didSet{
-                  self.titleLabel.textColor = isSeleted == true ? UIColor(hex: 0x2196F3) : UIColor.lightGray
-                  self.setNeedsDisplay()
-            }
-      }
-      
- 
-    
+    /**
+       * 当前是否被选中
+       */
+    var isSeleted: Bool = true {
+        didSet{
+            self.titleLabel.textColor = isSeleted == true ? UIColor(hex: 0x2196F3) : UIColor.lightGray
+            self.setNeedsDisplay()
+        }
+    }
       /**
        * bottomLineColor
        */

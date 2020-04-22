@@ -17,8 +17,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var placeTextView: UIPlaceHoderTextView!
     
     @IBOutlet weak var badgeButton: UIButton!
-    //    var ar = [2,3,4]
 
+    
     lazy var selectView: SelectedView = {
         let seleView = SelectedView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
         seleView.title_SelectColor = .red
@@ -30,19 +30,11 @@ class ViewController: UIViewController{
             Dlog("点击第\(index)个按钮")
             self?.badgeBtn.badgeValue = String(format: "%d", (index+1)*10)
             self?.badgeButton.badgeValue = String(format: "%d", (index+3)*10)
-            if index == 0 {
-                MBProgressHUD.showMessage("\(seleView.titles![index])", HUDMessagePosition.top,toView: nil)
-                MBProgressHUD.showMessage("\(seleView.titles![index])", HUDMessagePosition.bottom,toView: nil)
-
-            }else if index == 1 {
-                MBProgressHUD.showSuccess("success success success success successsuccess success success success success")
-            }else{
-                let bannerVC = BannerContentViewController()
-                self?.navigationController?.pushViewController(bannerVC, animated: true)
-            }
+           
         }
         return seleView
     }()
+    
     // MARK: - 搜索栏
     lazy var naviSearchView: SearchView = {
         let searchView = SearchView()
@@ -53,6 +45,7 @@ class ViewController: UIViewController{
         
         return searchView
     }()
+    
     // MARK: - 测试
     lazy var edage: EdgeLabel = {
         let label = EdgeLabel()
@@ -68,6 +61,7 @@ class ViewController: UIViewController{
         label.setAttribute(text: string, rangeString:"开始: " )
         return label
     }()
+    
     // MARK: -  标题按钮
     fileprivate lazy var titleBtn : TitleButton = {
         let titleBtn = TitleButton()
@@ -151,21 +145,29 @@ class ViewController: UIViewController{
         MobClick.event("2")
 
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func valueChange(_ sender: UISlider) {
         self.progressView.progress = CGFloat(sender.value)
 
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
       
       @IBAction func segmentPush(_ sender: Any) {
             self.navigationController?.pushViewController(ContentViewController(), animated: true)
 
       }
-     
+    @IBAction func pushShareVC(_ sender: UIButton) {
+        self.navigationController?.pushViewController(ShareViewController(), animated: true)
+    }
+    @IBAction func DragAction(_ sender: UIButton) {
+        self.navigationController?.pushViewController(DragViewController(), animated: true)
+
+    }
+    
 }
 
 extension ViewController {

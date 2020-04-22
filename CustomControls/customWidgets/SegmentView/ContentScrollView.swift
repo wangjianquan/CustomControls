@@ -51,7 +51,7 @@ class ContentScrollView: UIView {
       }
       
       fileprivate func setUI()  {
-            self.collectionView.frame = self.bounds
+        self.collectionView.frame = self.frame
             self.addSubview(self.collectionView)
             
       }
@@ -65,9 +65,10 @@ class ContentScrollView: UIView {
       
       func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
             let index = scrollView.contentOffset.x / self.frame.size.width
-            if  toIndexBlock != nil {
-                toIndexBlock!(Int(index))
-            }
+            MBProgressHUD.showMessage("\(index)")
+//            if  toIndexBlock != nil {
+//                toIndexBlock!(Int(index))
+//            }
       }
 
 }

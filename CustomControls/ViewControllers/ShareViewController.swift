@@ -93,7 +93,7 @@ class ShareViewController: UIViewController {
       self.view.addConstraints([collectionTop,collectionLeft,collectionRight,collectionBottom])
       // 使用NSLayoutConstraint-SSLayout
     
-//            view.addSubview(self.collectionView)
+            view.addSubview(self.collectionView)
       }
       
       override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {

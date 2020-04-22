@@ -34,8 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config.reportLogLevel = BuglyLogLevel.warn
         
         config.channel = "Bugly"
-        
-        Bugly.start(withAppId: "c9f7ff9896", config: config)
+        //AppID : 8609f46716
+        //Appkey: 5d4246f8-fd49-4ce7-b9fa-32f03425a48e
+        Bugly.start(withAppId: "8609f46716", config: config)
         
         Bugly.setTag(95418)
         

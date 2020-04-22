@@ -64,7 +64,7 @@ class AuthorizeSettingVC: UIViewController {
         openSettingsURL()
     }
     
-    @IBAction func dismiss(_ sender: Any) {
+    @IBAction fileprivate func dismiss(_ sender: Any) {
         dismissAnimation()
     }
     

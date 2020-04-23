@@ -16,11 +16,10 @@ class ContentViewController: UIViewController {
         let segmentView = SegmentView(frame:  CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
         segmentView.titles = ["基本的","案件信息","记录","ceshi"]
         segmentView.titleSelectedBlock = { [unowned self] (index) in
-                  Dlog("\(index)")
-//            self.contentScrollView.selectIndex(index: index)
+            self.contentScrollView.selectIndex(index: index)
         }
         return segmentView
-        }()
+    }()
 
     lazy var contentScrollView: ContentScrollView = {
         let contentView = ContentScrollView(frame: CGRect(x: 0, y: self.segmentView.frame.maxY, width: self.view.bounds.width, height: self.view.bounds.height - self.segmentView.frame.maxY))
@@ -30,6 +29,7 @@ class ContentViewController: UIViewController {
         }
         return contentView
     }()
+    
     func addChildsVC() -> [UIViewController] {
         let first = FirstVC()
         let second = SecondVC()
@@ -43,7 +43,7 @@ class ContentViewController: UIViewController {
         view.backgroundColor = UIColor.groupTableViewBackground
         view.addSubview(segmentView)
         view.addSubview(contentScrollView)
-      
+        
         // Do any additional setup after loading the view.
     }
     

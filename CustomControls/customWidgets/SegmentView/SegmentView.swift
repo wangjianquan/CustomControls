@@ -117,8 +117,8 @@ class SegmentView: UIView {
             let constraintH = NSLayoutConstraint(item: self.collectionView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 1, constant: 0)
             let constraintX = NSLayoutConstraint(item: self.collectionView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
             let constraintY = NSLayoutConstraint(item: self.collectionView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
-            self.addSubview(self.collectionView)
             self.addConstraints([constraintW,constraintH,constraintX,constraintY])
+            self.addSubview(self.collectionView)
       }
       
       func selectedIndex(index:NSInteger)  {
@@ -137,6 +137,18 @@ class SegmentView: UIView {
       
 }
 
+// MARK: - 自定义 layout
+fileprivate class SegmentViewFlowLayout: UICollectionViewFlowLayout {
+    override func prepare() {
+        super.prepare()
+        itemSize = CGSize(width: 23, height: 23)
+        minimumLineSpacing = 0
+        minimumInteritemSpacing = 0
+        scrollDirection = .horizontal
+        collectionView?.showsVerticalScrollIndicator = false
+        collectionView?.showsHorizontalScrollIndicator = false
+      }
+}
 
 // MARK: - UICollectionViewDataSource
 extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -152,7 +164,6 @@ extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource, UIC
             cell?.isSeleted = indexPath.row == selectedIndex ? true : false
             cell?.titleLabel.textColor = cell?.isSeleted == true ? self.titleSelectColor : self.titleNormalColor
             cell?.bottomLineColor = self.colorIsSame == true ? cell?.titleLabel.textColor : self.bottomLineColor
-        cell?.titleLabel
             if let title = self.titles?[indexPath.row] {
                   cell?.titleLabel.text = title
             }
@@ -175,15 +186,4 @@ extension SegmentView: UICollectionViewDelegate, UICollectionViewDataSource, UIC
       }
 
 }
-// MARK: - 自定义 layout
-class SegmentViewFlowLayout: UICollectionViewFlowLayout {
-      override func prepare() {
-            super.prepare()
-            itemSize = CGSize(width: 23, height: 23)
-            minimumLineSpacing = 0
-            minimumInteritemSpacing = 0
-            scrollDirection = .horizontal
-            collectionView?.showsVerticalScrollIndicator = false
-            collectionView?.showsHorizontalScrollIndicator = false
-      }
-}
+

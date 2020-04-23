@@ -51,9 +51,9 @@ class ViewController: UIViewController{
         let label = EdgeLabel()
         label.center.x = 15
         label.center.y = 100
-        label.size.width = UIScreen.main.bounds.size.width - 30
+        label.wj_size.width = UIScreen.main.bounds.size.width - 30
         let string = "开始: QWERTYUI欧普拉科技和规范的撒下次VB你们,破以一天热瓦水电费规划局快乐美女吧变成现在阿斯顿法国和健康"
-        label.size.height = string.contentHeight(titleText: string)
+        label.wj_size.height = string.contentHeight(titleText: string)
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 0
         label.edgeInsets = UIEdgeInsets.init(top: 5, left: 5, bottom: 5, right: 5)
@@ -161,8 +161,15 @@ class ViewController: UIViewController{
 
       }
     @IBAction func pushShareVC(_ sender: UIButton) {
-        self.navigationController?.pushViewController(ShareViewController(), animated: true)
+        let shareVC = ShareViewController()
+        shareVC.shareBlock = { [unowned self] (model) in
+            MBProgressHUD.showMessage(model.title)
+        }
+        let animator = FromBottomAnimator(presentedViewController: shareVC, presenting: self)
+        shareVC.transitioningDelegate = animator
+        self.present(shareVC, animated: true, completion: nil)
     }
+    
     @IBAction func DragAction(_ sender: UIButton) {
         self.navigationController?.pushViewController(DragViewController(), animated: true)
 

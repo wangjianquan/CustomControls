@@ -83,41 +83,16 @@ class DragViewController: UIViewController {
     ///设置状态栏背景颜色
     func setStatusBarBackgroundColor(color : UIColor) {
         if #available(iOS 13.0, *) {
-            #if swift(>=5.1)
-            if let statusBarManager = UIApplication.shared.keyWindow?.windowScene?.statusBarManager,
-                let localStatusBar = statusBarManager.perform(Selector(("createLocalStatusBar")))?.takeRetainedValue()
-                    as? UIView,
-                let statusBar = localStatusBar.perform(Selector(("statusBar")))?.takeRetainedValue() as? UIView,
-                let _statusBar = statusBar.value(forKey: "_statusBar") as? UIView {
-                print(localStatusBar, statusBar, _statusBar)
-                if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
-                    statusBar.backgroundColor = color
-                }
-            }
-            #endif
-        } else {
-            // Fallback on earlier versions
-            if let statusBarWindow = UIApplication.shared.value(forKey: "statusBarWindow") as? UIWindow {
-                let statusBar : UIView = statusBarWindow.value(forKey: "statusBar") as! UIView
-               /*
-                if statusBar.responds(to:Selector("setBackgroundColor:")) {
+            let statusBar = UIView(frame: UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
+            statusBar.backgroundColor = color
+            UIApplication.shared.keyWindow?.addSubview(statusBar)
+       } else {
+            let statusBarWindow : UIView = UIApplication.shared.value(forKey: "statusBarWindow") as! UIView
+            let statusBar :UIView = statusBarWindow.value(forKey:"statusBar")as!UIView
+            if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
                 statusBar.backgroundColor = color
-                }*/
-               if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
-                   statusBar.backgroundColor = color
-               }
             }
-        }
-        
-//        let statusBarWindow : UIView = UIApplication.shared.value(forKey: "statusBarWindow") as! UIView
-//        let statusBar : UIView = statusBarWindow.value(forKey: "statusBar") as! UIView
-//        /*
-//         if statusBar.responds(to:Selector("setBackgroundColor:")) {
-//         statusBar.backgroundColor = color
-//         }*/
-//        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
-//            statusBar.backgroundColor = color
-//        }
+       }
     }
 
     override func viewDidLoad() {
@@ -134,7 +109,6 @@ class DragViewController: UIViewController {
         //拖动手势
         circle.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(dragCircle)))
 
-//       setStatusBarBackgroundColor(color: .green)
 
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         btn.setImage(UIImage(named: "img_search"), for: .normal)

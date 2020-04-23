@@ -14,26 +14,9 @@ import Photos
 
 let placeholderI  = UIImage(named: "BannerPlaceHolder")
 
-//MARK: JSON返回状态  (state)
-let normal_state     : String   = "normal"              //   正常
-let error_state      : String   = "error"                // 出错
-let no_login_state   : String   = "no_login"        //未登陆
-let bind_phone_state : String   = "bind_phone" //手机号绑定
-let price_plus_state : String   = "price_plus" //余额不足
-
-
-var filterRefresh : Bool = true //filter是否可以刷新
-var refreshing: Bool = true // 详情页,是刷新
-
 let ScreenWidth_4               = UIScreen.main.bounds.size.width / 4.0 - 10
 let UserDefaults_CDR            = UserDefaults.standard
-
 let UserToken_CDR               = UserDefaults.standard.object(forKey: "token") as? String
-let EXIT_LOGINSNOTIFICAION      = "ExitLogInNotification"
-let SUCCESS_LOGINSNOTIFICAION   = "LogInNotification"
-let NOTIFICATION_NETSTASECHANGE = "netConnectStateChange"
-let ADDOUTRECORDSUCCESS         = "AddOutRecordSuccess"
-let JPUSHNOTIFICATION           = "jpushnotification"
 let PageSizeNum                 = "10"
 let JPushAPPKEY                 = "a06c080ce726b538738b18c9"
 
@@ -41,38 +24,24 @@ let JPushAPPKEY                 = "a06c080ce726b538738b18c9"
 let iPhone = UIDevice.current.userInterfaceIdiom == .phone
 let appVersion = Bundle.main.infoDictionary! ["CFBundleShortVersionString"] as! String
 
-let iPhone_X = iPhone && (SCREEN_HEIGHT  == 812 && SCREEN_WIDTH == 375)
-/// 状态栏高度
-let StatusBarHeight : CGFloat = iPhone_X ? 44 : 20
-/// 导航高度 + 状态栏的高度
-let NavigationHeight: CGFloat = 44 + StatusBarHeight
-
-
-//MARK: 默认带着自己的identfier
-protocol CellIdentfier {   }
-
-extension CellIdentfier {
-    static var identfier : String {
-        return "\(self)"
-    }
-}
+let iPhone_X = iPhone && (StatusBarHeight > 20)
 
 //================================================================================================================
 
 //1.swift全局常量
-let SCREEN_HEIGHT = UIScreen.main.bounds.height
-let SCREEN_WIDTH = UIScreen.main.bounds.width
 let FIT_WIDTH = UIScreen.main.bounds.size.width / 375
 let FIT_HEIGHT = UIScreen.main.bounds.size.height / 667
-let FONT_15 = UIFont.systemFont(ofSize: 15)
-let FONT_30 = UIFont.systemFont(ofSize: 30)
-let FONT_70 = UIFont.systemFont(ofSize: 70)
-let statusBar_Height = UIApplication.shared.statusBarFrame.height
+
+let SCREEN_WIDTH = UIScreen.main.bounds.width
+let SCREEN_HEIGHT = UIScreen.main.bounds.height
+/// 状态栏高度
+let StatusBarHeight : CGFloat = UIApplication.shared.statusBarFrame.height
+/// 导航高度 + 状态栏的高度
+let NavigationHeight: CGFloat = 44 + StatusBarHeight
+let safeBottomHeight: CGFloat = iPhone_X ? 34 : 0
 let origin_Y: CGFloat = NaviHeight()
 let tabBar_Height: CGFloat = getTabBarHeight()
-//    系统版本
-//let vir = UIDevice.current.systemVersion.st
-
+//系统版本
 let sysVersion =  UIDevice.current.systemVersion
 var IOS10 : Bool? {
      if #available(iOS 11.0, *) {
@@ -80,20 +49,14 @@ var IOS10 : Bool? {
     }
     return true
 }
+
 let iOS7 = (Double(UIDevice.current.systemVersion) ?? 0.0 >= 7.0)
 
 //本地
 let userDef =  UserDefaults.standard
 //
 let topOffsetY : CGFloat = IOS10 == true ? -64 : 0
-//let bottomOffsetY  : CGFloat = IOS10 == true ? 0 : 0
-//    let height : CGFloat = IOS10 == true ? SCREEN_HEIGHT - fotterBottomViewHeight+64 : SCREEN_HEIGHT - fotterBottomViewHeight
 
-//
-let  Pub_footerViewHeight : CGFloat = UIDevice.current.isX() == true ? 100 : 75
-
-//搜索栏 高度
-let searchViewHeight : CGFloat = UIDevice.current.isX() == true ? 40 : 38
 
 
 //tableview -> backgroundColor
@@ -103,15 +66,7 @@ let red_Color = UIColor(red: 251/255.0, green: 64/255.0, blue: 71/255.0, alpha: 
 /// 淡蓝色
 let lightBlue = UIColor(red:0.45, green:0.69, blue:0.95, alpha:1.00)
 
-// MARK: - 内边距EdgeLabel颜色设值
-let Label_Bg_GreenColor = RGB(81, g: 173, b: 73, 0.3)
-let Label_Bg_OrangeColor = RGB(253, g: 152, b: 45, 0.3)
-let Label_Bg_BlueColor = RGB(24, g: 146, b: 216, 0.3)
-let Label_Bg_RedColor = RGB(255, g: 38, b: 0, 0.3)
-let LabelGreenColor = RGB(81, g: 173, b: 73)
-let LabelOrangeColor = RGB(253, g: 152, b: 45)
-let LabelBlueColor = RGB(24, g: 146, b: 216)
-let Label_RedColor = RGB(255, g: 38, b: 0)
+
 
 
 
@@ -119,18 +74,23 @@ let Label_RedColor = RGB(255, g: 38, b: 0)
 let AlkatipBasma = "ALKATIP Basma Tom"
 let AlkatipRukki = "ALKATIP Rukki"
 let AppDefaultFont = UIFont.init(name: AlkatipBasma, size: 13)
-
 let RMB = "¥"
 let USD = "＄"
-// 跳转viewController
-let SwitchRootViewController = "SwitchRootViewController"
-// 推送
-let UqurJpushNotification = "UqurNotificationReceivePush"
-// MARK: - 发布功能-->通知
-let amenitiesNotification = "amenitiesNotification"
 
-//全局函数
-// MARK: - 自定义全局Log
+
+/**
+    通知 ： NSNotification
+*/
+let EXIT_LOGIN_NOTIFICATION      = "ExitLogInNotification"
+let SUCCESS_LOGIN_NOTIFICATION   = "LogInNotification"
+let NOTIFICATION_NETSTASECHANGE_NOTIFICATION = "netConnectStateChange"
+let JPUSHNOTIFICATION_NOTIFICATION      = "JPush_notification"
+
+
+/**
+    //全局函数
+    // MARK: - 自定义全局Log
+ */
 func Dlog<T>(_ message : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
     
     #if DEBUG
@@ -187,42 +147,10 @@ func getlinesWithRandomNumber(_ array: NSMutableArray) -> NSInteger {
     return (array.count/6) + 1
 }
 
-//2.定义函数获取全局常量
-func x(_ object: UIView) ->CGFloat {
-    
-    return object.frame.origin.x
-}
-
-func y(_ object: UIView) -> CGFloat {
-    return object.frame.origin.y
-}
-
-func width(_ object: UIView) -> CGFloat {
-    return object.frame.size.width
-}
-
-func height(_ object: UIView) -> CGFloat {
-    return object.frame.size.height
-}
-
-func centerX(_ object: UIView) -> CGFloat {
-    return object.center.x
-}
-
-func centerY(_ object: UIView) -> CGFloat {
-    return object.center.y
-}
 
 
 
-//RGB
-func RGB(_ r:CGFloat,g:CGFloat,b:CGFloat, _ alpha:CGFloat? = nil)->UIColor{
-    if  alpha == nil {
-        return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1)
-    }else{
-        return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: alpha!)
-    }
-}
+
 
 /*
  ** 公共方法
@@ -259,12 +187,12 @@ func PHAssetToUIImage(asset: PHAsset) -> UIImage {
 }
 
 public func NaviHeight() -> CGFloat {
-    let height: CGFloat = UIDevice.current.isX() == true ? 88 : 64
+    let height: CGFloat = UIDevice.current.isIPhoneX() == true ? 88 : 64
     return height
 }
 
 public func getTabBarHeight() -> CGFloat {
-    let height: CGFloat = UIDevice.current.isX() == true ? 83 : 49
+    let height: CGFloat = UIDevice.current.isIPhoneX() == true ? 83 : 49
     return height
 }
 
@@ -274,20 +202,6 @@ public func getTabBarHeight() -> CGFloat {
  *** extension集合
  */
 
-
-// MARK: - 返回随机颜色
-extension UIColor {
-    class var randomColor: UIColor {
-        get {
-            let red = CGFloat(arc4random()%256)/255.0
-            let green = CGFloat(arc4random()%256)/255.0
-            let blue = CGFloat(arc4random()%256)/255.0
-            return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
-        }
-    }
-    
-    
-}
 
 extension UIFont {
     class func costumFont (ofSize : CGFloat) -> UIFont {
@@ -333,8 +247,8 @@ func customSubstring(_ str: String) -> [String] {
 }
 
 extension UIDevice {
-    public func isX() -> Bool {
-        if UIScreen.main.bounds.height == 812 {
+    public func isIPhoneX() -> Bool {
+        if UIApplication.shared.statusBarFrame.height > 20 {
             return true
         }
         return false
@@ -353,7 +267,7 @@ extension UIViewController {
 
     func errorCode(code: Int? ){
         if code == 403 {
-            NotificationCenter.default.post(name: Notification.Name(rawValue:EXIT_LOGINSNOTIFICAION), object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue:EXIT_LOGIN_NOTIFICATION), object: nil)
         }
     }
     

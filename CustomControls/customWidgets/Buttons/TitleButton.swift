@@ -20,8 +20,9 @@ class TitleButton: UIButton {
     }
     
     fileprivate  func setupUI()  {
-        setImage(UIImage(named:"rightArrow"), for: .normal)
-        setImage(UIImage(named:"downArrow"), for: .selected)
+        
+        setImage(UIImage(named:"arrow_down"), for: .normal)
+        setImage(UIImage(named:"arrow_up"), for: .selected)
         setTitleColor(.white, for: .normal)
         setTitleColor(.white, for: .selected)
         sizeToFit()

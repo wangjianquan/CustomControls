@@ -171,7 +171,9 @@ class ViewController: UIViewController{
     }
     
     @IBAction func DragAction(_ sender: UIButton) {
-        self.navigationController?.pushViewController(DragViewController(), animated: true)
+//        self.navigationController?.pushViewController(DragViewController(), animated: true)
+
+        self.navigationController?.pushViewController(BannerContentViewController(), animated: true)
 
     }
     

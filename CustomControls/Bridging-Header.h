@@ -21,9 +21,7 @@
 //#import <UShareUI/UShareUI.h>
 
 //导入UMAnalytics的OC的头文件
-#import <UMAnalytics/DplusMobClick.h>
 #import <UMAnalytics/MobClick.h>
-#import <UMAnalytics/MobClickGameAnalytics.h>
 #import "MBProgressHUD.h"
 
 

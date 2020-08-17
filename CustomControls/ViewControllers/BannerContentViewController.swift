@@ -111,8 +111,11 @@ class BannerContentViewController: UIViewController {
         label.text = "图片名称 \(text)"
         label.textAlignment = .center
         infiniteScrollView.addSubview(label)
+        
 
     }
+    
+    
     /*
     // MARK: - Navigation
 

@@ -128,13 +128,13 @@ class DragViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        MobClick.beginLogPageView("\(type(of: self))")
+        MobClick.beginLogPageView("\(type(of: self))")
         Dlog(getFontName())
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        MobClick.endLogPageView("\(type(of: self))")
+        MobClick.endLogPageView("\(type(of: self))")
     }
     
     

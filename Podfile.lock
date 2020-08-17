@@ -1,14 +1,37 @@
 PODS:
-  - Bugly (2.5.4)
+  - Bugly (2.5.71)
   - C4 (3.0.1)
   - MBProgressHUD (1.2.0)
   - SnapKit (5.0.1)
   - SVProgressHUD (2.2.5)
-  - UMCAnalytics (6.1.0):
+  - UMCCommon (7.1.1)
+  - UMCCommonLog (2.0.0)
+  - UMCShare/Core (6.9.10):
     - UMCCommon
-  - UMCCommon (2.1.4)
-  - UMCCommonLog (1.0.0)
-  - UMCSecurityPlugins (1.0.6)
+  - UMCShare/Social/QQ (6.9.10):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedQQ
+  - UMCShare/Social/ReducedQQ (6.9.10):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.9.10):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.9.10):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/Sina (6.9.10):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedSina
+  - UMCShare/Social/WeChat (6.9.10):
+    - UMCCommon
+    - UMCShare/Core
+    - UMCShare/Social/ReducedWeChat
+  - UMCShare/UI (6.9.10):
+    - UMCCommon
+    - UMCShare/Core
 
 DEPENDENCIES:
   - Bugly
@@ -16,10 +39,12 @@ DEPENDENCIES:
   - MBProgressHUD
   - SnapKit
   - SVProgressHUD
-  - UMCAnalytics
   - UMCCommon
   - UMCCommonLog
-  - UMCSecurityPlugins
+  - UMCShare/Social/QQ
+  - UMCShare/Social/Sina
+  - UMCShare/Social/WeChat
+  - UMCShare/UI
 
 SPEC REPOS:
   trunk:
@@ -28,22 +53,20 @@ SPEC REPOS:
     - MBProgressHUD
     - SnapKit
     - SVProgressHUD
-    - UMCAnalytics
     - UMCCommon
     - UMCCommonLog
-    - UMCSecurityPlugins
+    - UMCShare
 
 SPEC CHECKSUMS:
-  Bugly: 4edda9bb0e3017fd453612189069757195fa23ca
+  Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
   C4: 8a51425000f760d5e89ba294a8284467a1bd1231
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  UMCAnalytics: 3503f179f7af932b30af9ac161ac11fb48fa72b6
-  UMCCommon: b0703b0053323f598e01670ea702b8eb1e66e611
-  UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
-  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
+  UMCCommon: f455f92c125342e360d6ad9eafe484945351eeb5
+  UMCCommonLog: 9b7ddde5d14a52fc1986ba5ac3121b8b2f433638
+  UMCShare: a4a95fbdd61ecce5b6751d8c9ed9b519e80fcbc9
 
-PODFILE CHECKSUM: fba1e9a756f5f989d8c8e424afa1f18079d6171e
+PODFILE CHECKSUM: f53b13ddbda67b1966f4958d4b04bf11b05677dc
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0.beta.2

@@ -14,7 +14,7 @@ class UMTool: NSObject {
         UMConfigure.initWithAppkey(UM_TJ_Appkey, channel: nil)
         UMCommonLogManager.setUp()
         UMConfigure.setLogEnabled(true)
-        MobClick.setScenarioType(.E_UM_NORMAL)
+//        MobClick.setScenarioType(.E_UM_NORMAL)
         MobClick.setCrashReportEnabled(true)
         let str = UMConfigure.deviceIDForIntegration()
         

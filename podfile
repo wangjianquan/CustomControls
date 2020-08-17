@@ -4,17 +4,20 @@
 target 'CustomControls' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-   pod 'SnapKit'
+    pod 'SnapKit'
 
   # Pods for CustomControls
     pod 'SVProgressHUD'
     pod 'MBProgressHUD'
-  #  UM 基础库
     pod 'UMCCommon'
     pod 'UMCCommonLog'
-    pod 'UMCSecurityPlugins'
-    # UM 统计
-    pod 'UMCAnalytics'
+    pod 'UMCShare/UI'
+    # 集成微信(完整版14.4M)
+    pod 'UMCShare/Social/WeChat'
+    # 集成QQ/QZone/TIM(完整版7.6M)
+    pod 'UMCShare/Social/QQ'
+    # 集成新浪微博(完整版25.3M)
+    pod 'UMCShare/Social/Sina'
     
     pod 'Bugly'
     pod 'C4'

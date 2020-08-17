@@ -23,6 +23,7 @@ class CustomMBPhudVC: UIViewController {
         array.append(group)
         return array
     }()
+    
     lazy var titleBtn : TitleButton = {
         let btn = TitleButton()
         btn.setTitle("popView", for: .normal)
@@ -31,9 +32,11 @@ class CustomMBPhudVC: UIViewController {
         return btn
     }()
     
+    let http200Status = (statusCode: 200, description: "OK")
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.titleView = titleBtn
+
 
         // Do any additional setup after loading the view.
     }

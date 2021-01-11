@@ -233,8 +233,5 @@ extension FromBottomAnimator {
             fromView.removeFromSuperview()
             transitionContext.completeTransition(true)
         }
-        
-        
-        
     }
 }

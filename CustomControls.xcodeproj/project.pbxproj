@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120D954425AC04EB00F95416 /* BaseWebVC.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 120D954225AC04EB00F95416 /* BaseWebVC.bundle */; };
+		120D954525AC04EB00F95416 /* BaseWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D954325AC04EB00F95416 /* BaseWebVC.swift */; };
+		120D959625AC479500F95416 /* BaseWebActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D959525AC479500F95416 /* BaseWebActivity.swift */; };
+		120D95A925AC4C4C00F95416 /* BaseWebActivitySafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D95A825AC4C4B00F95416 /* BaseWebActivitySafari.swift */; };
+		120D95AF25AC4F8C00F95416 /* BaseWebActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 120D95AC25AC4F8C00F95416 /* BaseWebActivitySafari@2x.png */; };
+		120D95B025AC4F8C00F95416 /* BaseWebActivitySafari-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 120D95AD25AC4F8C00F95416 /* BaseWebActivitySafari-iPad@2x.png */; };
+		120D95B125AC4F8C00F95416 /* BaseWebActivitySafari-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 120D95AE25AC4F8C00F95416 /* BaseWebActivitySafari-iPad.png */; };
+		120D95C125AC4FE800F95416 /* BaseWebActivityChrome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 120D95BE25AC4FE800F95416 /* BaseWebActivityChrome@2x.png */; };
+		120D95C225AC4FE800F95416 /* BaseWebActivityChrome-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 120D95BF25AC4FE800F95416 /* BaseWebActivityChrome-iPad@2x.png */; };
+		120D95C325AC4FE800F95416 /* BaseWebActivityChrome-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 120D95C025AC4FE800F95416 /* BaseWebActivityChrome-iPad.png */; };
+		120D95C625AC4FF300F95416 /* BaseWebActivityChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D95C525AC4FF300F95416 /* BaseWebActivityChrome.swift */; };
 		121B255423BF47FD000EB096 /* GCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121B255323BF47FD000EB096 /* GCDTimer.swift */; };
 		121B255723BF4BA1000EB096 /* ALGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 121B255623BF4BA1000EB096 /* ALGCDTimer.m */; };
 		1220A0BD245184FA0055A410 /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1220A0BC245184FA0055A410 /* UITableViewCell+extension.swift */; };
@@ -82,6 +93,17 @@
 
 /* Begin PBXFileReference section */
 		0C0208252D9E8D510E4267A8 /* Pods-CustomControls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomControls.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomControls/Pods-CustomControls.release.xcconfig"; sourceTree = "<group>"; };
+		120D954225AC04EB00F95416 /* BaseWebVC.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BaseWebVC.bundle; sourceTree = "<group>"; };
+		120D954325AC04EB00F95416 /* BaseWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebVC.swift; sourceTree = "<group>"; };
+		120D959525AC479500F95416 /* BaseWebActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebActivity.swift; sourceTree = "<group>"; };
+		120D95A825AC4C4B00F95416 /* BaseWebActivitySafari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebActivitySafari.swift; sourceTree = "<group>"; };
+		120D95AC25AC4F8C00F95416 /* BaseWebActivitySafari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BaseWebActivitySafari@2x.png"; sourceTree = "<group>"; };
+		120D95AD25AC4F8C00F95416 /* BaseWebActivitySafari-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BaseWebActivitySafari-iPad@2x.png"; sourceTree = "<group>"; };
+		120D95AE25AC4F8C00F95416 /* BaseWebActivitySafari-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BaseWebActivitySafari-iPad.png"; sourceTree = "<group>"; };
+		120D95BE25AC4FE800F95416 /* BaseWebActivityChrome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BaseWebActivityChrome@2x.png"; sourceTree = "<group>"; };
+		120D95BF25AC4FE800F95416 /* BaseWebActivityChrome-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BaseWebActivityChrome-iPad@2x.png"; sourceTree = "<group>"; };
+		120D95C025AC4FE800F95416 /* BaseWebActivityChrome-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BaseWebActivityChrome-iPad.png"; sourceTree = "<group>"; };
+		120D95C525AC4FF300F95416 /* BaseWebActivityChrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebActivityChrome.swift; sourceTree = "<group>"; };
 		121B255323BF47FD000EB096 /* GCDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDTimer.swift; sourceTree = "<group>"; };
 		121B255523BF4BA1000EB096 /* ALGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALGCDTimer.h; sourceTree = "<group>"; };
 		121B255623BF4BA1000EB096 /* ALGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALGCDTimer.m; sourceTree = "<group>"; };
@@ -176,6 +198,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120D954125AC04EB00F95416 /* BaseWebView */ = {
+			isa = PBXGroup;
+			children = (
+				120D959425AC475D00F95416 /* UIActivities */,
+				120D954225AC04EB00F95416 /* BaseWebVC.bundle */,
+				120D954325AC04EB00F95416 /* BaseWebVC.swift */,
+			);
+			path = BaseWebView;
+			sourceTree = "<group>";
+		};
+		120D959425AC475D00F95416 /* UIActivities */ = {
+			isa = PBXGroup;
+			children = (
+				120D959525AC479500F95416 /* BaseWebActivity.swift */,
+				120D95B325AC4F9D00F95416 /* Chrome */,
+				120D959925AC4B7E00F95416 /* Safari */,
+			);
+			path = UIActivities;
+			sourceTree = "<group>";
+		};
+		120D959925AC4B7E00F95416 /* Safari */ = {
+			isa = PBXGroup;
+			children = (
+				120D95AE25AC4F8C00F95416 /* BaseWebActivitySafari-iPad.png */,
+				120D95AD25AC4F8C00F95416 /* BaseWebActivitySafari-iPad@2x.png */,
+				120D95AC25AC4F8C00F95416 /* BaseWebActivitySafari@2x.png */,
+				120D95A825AC4C4B00F95416 /* BaseWebActivitySafari.swift */,
+			);
+			path = Safari;
+			sourceTree = "<group>";
+		};
+		120D95B325AC4F9D00F95416 /* Chrome */ = {
+			isa = PBXGroup;
+			children = (
+				120D95C025AC4FE800F95416 /* BaseWebActivityChrome-iPad.png */,
+				120D95BF25AC4FE800F95416 /* BaseWebActivityChrome-iPad@2x.png */,
+				120D95BE25AC4FE800F95416 /* BaseWebActivityChrome@2x.png */,
+				120D95C525AC4FF300F95416 /* BaseWebActivityChrome.swift */,
+			);
+			path = Chrome;
+			sourceTree = "<group>";
+		};
 		1220A0CE2451A5E00055A410 /* Animators */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +253,7 @@
 		12545D4523C3296900499871 /* customWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				120D954125AC04EB00F95416 /* BaseWebView */,
 				1220A0D92451A67E0055A410 /* UIPlaceHoderTextView.swift */,
 				12545D4623C3296900499871 /* Buttons */,
 				12545D4A23C3296900499871 /* SearchViews */,
@@ -295,8 +360,8 @@
 			children = (
 				1220A0CE2451A5E00055A410 /* Animators */,
 				1C07B21921A790F600D86591 /* Extension */,
-				121B255623BF4BA1000EB096 /* ALGCDTimer.m */,
 				121B255523BF4BA1000EB096 /* ALGCDTimer.h */,
+				121B255623BF4BA1000EB096 /* ALGCDTimer.m */,
 				1C07B21A21A791B600D86591 /* AuthorizeTool.swift */,
 				121B255323BF47FD000EB096 /* GCDTimer.swift */,
 				1C07B22D21A7925900D86591 /* UMTool.swift */,
@@ -463,8 +528,9 @@
 				TargetAttributes = {
 					7CD79E8B1F1359DB0046D461 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = HTLUXJY7R8;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Siri = {
 								enabled = 1;
@@ -497,6 +563,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				12545D7523C3296900499871 /* pageControlDot@3x.png in Resources */,
+				120D95C125AC4FE800F95416 /* BaseWebActivityChrome@2x.png in Resources */,
+				120D95AF25AC4F8C00F95416 /* BaseWebActivitySafari@2x.png in Resources */,
 				7C11DBC4216C5AB20055E5A4 /* SecondVC.xib in Resources */,
 				7CBFFC1921491C8900A03A65 /* Main.storyboard in Resources */,
 				12C666F4245000C3004492B5 /* MBProgressHUD.bundle in Resources */,
@@ -504,11 +572,16 @@
 				12545D7223C3296900499871 /* pageControlCurrentDot@3x.png in Resources */,
 				1220A0D82451A66B0055A410 /* Assets.xcassets in Resources */,
 				12545D7023C3296900499871 /* placeholder@2x.png in Resources */,
+				120D954425AC04EB00F95416 /* BaseWebVC.bundle in Resources */,
 				1C07B22821A791D200D86591 /* AuthorizeSettingVC.xib in Resources */,
 				12545D7323C3296900499871 /* h5.png in Resources */,
 				12545D7123C3296900499871 /* pageControlCurrentDot@2x.png in Resources */,
 				12545D7823C3296900499871 /* pageControlDot@2x.png in Resources */,
+				120D95C225AC4FE800F95416 /* BaseWebActivityChrome-iPad@2x.png in Resources */,
+				120D95C325AC4FE800F95416 /* BaseWebActivityChrome-iPad.png in Resources */,
+				120D95B125AC4F8C00F95416 /* BaseWebActivitySafari-iPad.png in Resources */,
 				12545D8623C330EC00499871 /* h4.jpg in Resources */,
+				120D95B025AC4F8C00F95416 /* BaseWebActivitySafari-iPad@2x.png in Resources */,
 				12545D8323C330EC00499871 /* h2.jpg in Resources */,
 				12545D8523C330EC00499871 /* h1.jpg in Resources */,
 				7CD79E9A1F1359DB0046D461 /* LaunchScreen.storyboard in Resources */,
@@ -600,6 +673,7 @@
 				1C07B22E21A7925900D86591 /* UMTool.swift in Sources */,
 				1C07B21F21A791BD00D86591 /* UIView+Extention.swift in Sources */,
 				1220A0CD245187720055A410 /* UINavigationBar+Extension.swift in Sources */,
+				120D959625AC479500F95416 /* BaseWebActivity.swift in Sources */,
 				1220A0D42451A5F00055A410 /* WjPresentationCoutroller.swift in Sources */,
 				7CADDE2923B4FCA700873D61 /* MBProgressHUD.swift in Sources */,
 				7CBD22FF2160CD4E00599509 /* GlobalConst.swift in Sources */,
@@ -610,6 +684,7 @@
 				1220A0D32451A5F00055A410 /* PopAnimation.swift in Sources */,
 				12545D7A23C3296900499871 /* InfiniteScrollView.swift in Sources */,
 				1C20E8DB21ACF05D006D6656 /* WJSegmentedControl.swift in Sources */,
+				120D954525AC04EB00F95416 /* BaseWebVC.swift in Sources */,
 				1220A0C1245186BD0055A410 /* UIStackView+extension.swift in Sources */,
 				7C11DBC5216C5AB20055E5A4 /* FirstVC.swift in Sources */,
 				121B255723BF4BA1000EB096 /* ALGCDTimer.m in Sources */,
@@ -623,6 +698,8 @@
 				12545D6723C3296900499871 /* UIButton+badge.swift in Sources */,
 				1220A0C9245187210055A410 /* UIBarButtonItem+extension.swift in Sources */,
 				1220A0C72451870A0055A410 /* UIButton+Extension.swift in Sources */,
+				120D95A925AC4C4C00F95416 /* BaseWebActivitySafari.swift in Sources */,
+				120D95C625AC4FF300F95416 /* BaseWebActivityChrome.swift in Sources */,
 				1220A0CB245187380055A410 /* NSObject+extension.swift in Sources */,
 				1220A0D02451A5E00055A410 /* FromBottomAnimator.swift in Sources */,
 				121B255423BF47FD000EB096 /* GCDTimer.swift in Sources */,
@@ -785,8 +862,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CustomControls/CustomControls.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HTLUXJY7R8;
 				INFOPLIST_FILE = CustomControls/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -805,8 +882,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CustomControls/CustomControls.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HTLUXJY7R8;
 				INFOPLIST_FILE = CustomControls/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

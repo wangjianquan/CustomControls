@@ -28,10 +28,6 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 .DS_Store
-<<<<<<< HEAD
-=======
-*/.DS_Store
->>>>>>> be9d03a7a9dd54c1776028391d9a75b5d6f1676a
 
 ## Playgrounds
 timeline.xctimeline

@@ -15,7 +15,7 @@ class BannerContentViewController: UIViewController {
 //    let gap = Double(SCREEN_WIDTH)
     let count = 20
 
-    
+
     fileprivate let gap = 150.0
     //对于每个指示器，设置开始时中心位置的偏移量
     fileprivate let dx = 40.0
@@ -30,8 +30,6 @@ class BannerContentViewController: UIViewController {
         infiniteScrollView.backgroundColor = UIColor.red
         //add the view to the canvas
         self.view.addSubview(infiniteScrollView)
-
-        
 
         addVisualIndicators()
         // Do any additional setup after loading the view.

@@ -30,7 +30,12 @@ class ViewController: UIViewController{
             Dlog("点击第\(index)个按钮")
             self?.badgeBtn.badgeValue = String(format: "%d", (index+1)*10)
             self?.badgeButton.badgeValue = String(format: "%d", (index+3)*10)
-           
+            if index == 2 {
+                let webVC = BaseWebVC()
+                webVC.URLString = "http://sso.ipmph.com/privacy"
+                webVC.share = true
+                self?.navigationController?.pushViewController(webVC, animated: true)
+            }
         }
         return seleView
     }()

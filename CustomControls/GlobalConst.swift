@@ -11,7 +11,6 @@ import UIKit
 import Photos
 
 
-
 let placeholderI  = UIImage(named: "BannerPlaceHolder")
 
 let ScreenWidth_4               = UIScreen.main.bounds.size.width / 4.0 - 10
@@ -22,6 +21,8 @@ let JPushAPPKEY                 = "a06c080ce726b538738b18c9"
 
 /// 判断设备
 let iPhone = UIDevice.current.userInterfaceIdiom == .phone
+let iPad = UIDevice.current.userInterfaceIdiom == .pad
+
 let appVersion = Bundle.main.infoDictionary! ["CFBundleShortVersionString"] as! String
 
 let iPhone_X = iPhone && (StatusBarHeight > 20)
@@ -29,17 +30,18 @@ let iPhone_X = iPhone && (StatusBarHeight > 20)
 //================================================================================================================
 
 //1.swift全局常量
-let FIT_WIDTH = UIScreen.main.bounds.size.width / 375
-let FIT_HEIGHT = UIScreen.main.bounds.size.height / 667
+let SCALE_WIDTH = UIScreen.main.bounds.size.width / 375
+let SCALE_HEIGHT = UIScreen.main.bounds.size.height / 667
 
 let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
+
 /// 状态栏高度
 let StatusBarHeight : CGFloat = UIApplication.shared.statusBarFrame.height
 /// 导航高度 + 状态栏的高度
-let NavigationHeight: CGFloat = 44 + StatusBarHeight
+let NavigationBarHeight: CGFloat = 44
 let safeBottomHeight: CGFloat = iPhone_X ? 34 : 0
-let origin_Y: CGFloat = NaviHeight()
+let origin_Y: CGFloat = StatusBarHeight + NavigationBarHeight
 let tabBar_Height: CGFloat = getTabBarHeight()
 //系统版本
 let sysVersion =  UIDevice.current.systemVersion
@@ -184,11 +186,6 @@ func PHAssetToUIImage(asset: PHAsset) -> UIImage {
     })
     return image
     
-}
-
-public func NaviHeight() -> CGFloat {
-    let height: CGFloat = UIDevice.current.isIPhoneX() == true ? 88 : 64
-    return height
 }
 
 public func getTabBarHeight() -> CGFloat {

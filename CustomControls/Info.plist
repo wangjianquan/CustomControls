@@ -23,7 +23,7 @@
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
 	<string>App需要您的同意,  才能访问日历,以便于为您提供日历查阅等服务</string>

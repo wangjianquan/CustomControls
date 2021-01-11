@@ -139,7 +139,7 @@ extension CustomMBPhudVC {
         menuView.dataSource = self.dataSource
         let popview_Width : CGFloat  =  SCREEN_WIDTH
         let popview_Height : CGFloat =  CGFloat(self.dataSource.count) * 45 > SCREEN_HEIGHT/2 ? SCREEN_HEIGHT/2 : CGFloat(self.dataSource.count) * 45
-        let  popview_y : CGFloat = NavigationHeight
+        let  popview_y : CGFloat = origin_Y
 
         popAnimation.presentedFrame = CGRect(x: (SCREEN_WIDTH - popview_Width)/2, y: popview_y, width: popview_Width, height: popview_Height)
         

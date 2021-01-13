@@ -14,8 +14,12 @@ class ContentViewController: UIViewController {
 
     lazy var segmentView: SegmentView = {
         let segmentView = SegmentView(frame:  CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
-        segmentView.titles = ["基本的","案件信息","记录","ceshi"]
+//        segmentView.titles = ["基本的","案件信息","记录","ceshi"]
+        segmentView.titles = ["饮食健康","国际新闻","BBC","体育","科技","农业","财经","互联网金融","新时代","VLOG","三农","情感","食品","军事"]
+        segmentView.bottomLineLeading = false
+//        segmentView.bottomLineX = 24;
         segmentView.titleSelectedBlock = { [unowned self] (index) in
+            //MBProgressHUD.showMessage(segmentView.titles[index])
             self.contentScrollView.selectIndex(index: index)
         }
         return segmentView
@@ -25,6 +29,7 @@ class ContentViewController: UIViewController {
         let contentView = ContentScrollView(frame: CGRect(x: 0, y: self.segmentView.frame.maxY, width: self.view.bounds.width, height: self.view.bounds.height - self.segmentView.frame.maxY))
         contentView.viewControllers = addChildsVC()
         contentView.toIndexBlock = {[weak self ] index in
+            //MBProgressHUD.showMessage((self?.segmentView.titles[index])!)
             self?.segmentView.selectedIndex(index: index)
         }
         return contentView
